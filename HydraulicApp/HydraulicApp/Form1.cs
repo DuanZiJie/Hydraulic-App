@@ -19,7 +19,11 @@ namespace HydraulicApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label1.Text = Convert.ToString(Basic.Horsepower(Convert.ToDouble(pressureTextBox.Text), Convert.ToDouble(flowTextBox.Text)));
+            double pressure;
+            double flow;
+
+            if (Double.TryParse(pressureTextBox.Text, out pressure) && Double.TryParse(flowTextBox.Text, out flow))
+                label1.Text = Convert.ToString(Basic.Horsepower(pressure, flow));
         }
     }
 }
