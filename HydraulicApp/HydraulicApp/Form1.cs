@@ -23,7 +23,7 @@ namespace HydraulicApp
             double flow;
 
             if (Double.TryParse(pressureTextBox.Text, out pressure) && Double.TryParse(flowTextBox.Text, out flow))
-                label1.Text = Convert.ToString(Basic.Horsepower(pressure, flow));
+                label1.Text = "The horsepower is " + Convert.ToString(Basic.Horsepower(pressure, flow));
         }
     }
 }
