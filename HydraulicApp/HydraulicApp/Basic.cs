@@ -23,11 +23,6 @@ namespace HydraulicApp
             return pressure * flow / 1714;
         }
 
-        static public double Velocity(double GPM, double Area)
-        {
-            return 0.3208 * GPM / Area;
-        }
-
         static public double Compressibility(double bulkModulus)
         {
             return 1 / bulkModulus;

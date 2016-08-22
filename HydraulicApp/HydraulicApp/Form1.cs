@@ -17,13 +17,31 @@ namespace HydraulicApp
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void determineHorsepowerButton_Click(object sender, EventArgs e)
         {
             double pressure;
             double flow;
 
-            if (Double.TryParse(pressureTextBox.Text, out pressure) && Double.TryParse(flowTextBox.Text, out flow))
-                label1.Text = "The horsepower is " + Convert.ToString(Basic.Horsepower(pressure, flow));
+            if (Double.TryParse(pressureTextBox.Text, out pressure) && Double.TryParse(flowRatePowerTextBox.Text, out flow))
+                label1.Text = label1.Text + Basic.Horsepower(pressure, flow).ToString("F2") + " hp";
+        }
+
+        private void determinePressureButton_Click(object sender, EventArgs e)
+        {
+            double area;
+            double force;
+
+            if(Double.TryParse(areaTextBox.Text, out area) && (Double.TryParse(forceTextBox.Text, out force)))
+                pressureAnswerTextBox.Text = pressureAnswerTextBox.Text + Basic.FluidPressure(force, area).ToString("F2") + " PSI";
+        }
+
+        private void determineVelocityButton_Click(object sender, EventArgs e)
+        {
+            double area;
+            double flowRate;
+
+            if (Double.TryParse(flowRateVelocityTextBox.Text, out flowRate) && Double.TryParse(flowRateVelocityTextBox.Text, out area))
+                velocityAnswerTextBox.Text = velocityAnswerTextBox.Text + Misc.FluidVelocity(flowRate, area).ToString("F2") + " feet per second";
         }
     }
 }
