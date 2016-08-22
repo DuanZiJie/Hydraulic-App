@@ -43,5 +43,14 @@ namespace HydraulicApp
             if (Double.TryParse(flowRateVelocityTextBox.Text, out flowRate) && Double.TryParse(flowRateVelocityTextBox.Text, out area))
                 velocityAnswerTextBox.Text = velocityAnswerTextBox.Text + Misc.FluidVelocity(flowRate, area).ToString("F2") + " feet per second";
         }
+
+        private void determineFlowRateButton_Click(object sender, EventArgs e)
+        {
+            double volume;
+            double time;
+
+            if (Double.TryParse(enterTimeTextBox.Text, out time) && Double.TryParse(enterVolumeTextBox.Text, out volume))
+                flowrateAnswerLabel.Text = flowrateAnswerLabel.Text + Basic.FluidFlowRate(volume, time).ToString("F2") + " GPM";
+        }
     }
 }
