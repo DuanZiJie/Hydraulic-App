@@ -32,5 +32,10 @@ namespace HydraulicApp
         {
             return weight / 62.4283;
         }
+
+        static public double AreaOfCircle(double dia)
+        {
+            return Math.Pow(Math.PI * dia / 2, 2);
+        }
     }
 }

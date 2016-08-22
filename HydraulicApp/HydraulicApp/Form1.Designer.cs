@@ -59,6 +59,7 @@
             this.enterVolumeTextBox = new System.Windows.Forms.TextBox();
             this.enterTimeTextBox = new System.Windows.Forms.TextBox();
             this.determineFlowRateButton = new System.Windows.Forms.Button();
+            this.areaCalcLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.velocityGroupBox.SuspendLayout();
@@ -69,7 +70,7 @@
             // 
             // determineHorsePowerbutton
             // 
-            this.determineHorsePowerbutton.Location = new System.Drawing.Point(225, 33);
+            this.determineHorsePowerbutton.Location = new System.Drawing.Point(242, 33);
             this.determineHorsePowerbutton.Name = "determineHorsePowerbutton";
             this.determineHorsePowerbutton.Size = new System.Drawing.Size(115, 39);
             this.determineHorsePowerbutton.TabIndex = 2;
@@ -131,7 +132,7 @@
             // 
             // determineVelocityButton
             // 
-            this.determineVelocityButton.Location = new System.Drawing.Point(225, 22);
+            this.determineVelocityButton.Location = new System.Drawing.Point(248, 22);
             this.determineVelocityButton.Name = "determineVelocityButton";
             this.determineVelocityButton.Size = new System.Drawing.Size(115, 39);
             this.determineVelocityButton.TabIndex = 5;
@@ -182,6 +183,7 @@
             // 
             // pressureGroupBox
             // 
+            this.pressureGroupBox.Controls.Add(this.areaCalcLabel);
             this.pressureGroupBox.Controls.Add(this.determinePressureButton);
             this.pressureGroupBox.Controls.Add(this.areaTextBox);
             this.pressureGroupBox.Controls.Add(this.forceTextBox);
@@ -197,7 +199,7 @@
             // 
             // determinePressureButton
             // 
-            this.determinePressureButton.Location = new System.Drawing.Point(225, 26);
+            this.determinePressureButton.Location = new System.Drawing.Point(242, 26);
             this.determinePressureButton.Name = "determinePressureButton";
             this.determinePressureButton.Size = new System.Drawing.Size(115, 35);
             this.determinePressureButton.TabIndex = 5;
@@ -362,13 +364,24 @@
             // 
             // determineFlowRateButton
             // 
-            this.determineFlowRateButton.Location = new System.Drawing.Point(227, 33);
+            this.determineFlowRateButton.Location = new System.Drawing.Point(251, 33);
             this.determineFlowRateButton.Name = "determineFlowRateButton";
             this.determineFlowRateButton.Size = new System.Drawing.Size(106, 39);
             this.determineFlowRateButton.TabIndex = 5;
             this.determineFlowRateButton.Text = "Determine Flowrate";
             this.determineFlowRateButton.UseVisualStyleBackColor = true;
             this.determineFlowRateButton.Click += new System.EventHandler(this.determineFlowRateButton_Click);
+            // 
+            // areaCalcLabel
+            // 
+            this.areaCalcLabel.AutoSize = true;
+            this.areaCalcLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.areaCalcLabel.Location = new System.Drawing.Point(213, 48);
+            this.areaCalcLabel.Name = "areaCalcLabel";
+            this.areaCalcLabel.Size = new System.Drawing.Size(13, 13);
+            this.areaCalcLabel.TabIndex = 6;
+            this.areaCalcLabel.Text = "?";
+            this.areaCalcLabel.Click += new System.EventHandler(this.areaCalcLabel_Click);
             // 
             // Form1
             // 
@@ -424,6 +437,7 @@
         private System.Windows.Forms.Label flowrateAnswerLabel;
         private System.Windows.Forms.Label enterTimeFlowrate;
         private System.Windows.Forms.Label enterVolumeLabelFlowrate;
+        private System.Windows.Forms.Label areaCalcLabel;
     }
 }
 
