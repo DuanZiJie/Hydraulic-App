@@ -32,6 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.flowRateGroupBox = new System.Windows.Forms.GroupBox();
+            this.determineFlowRateButton = new System.Windows.Forms.Button();
+            this.enterTimeTextBox = new System.Windows.Forms.TextBox();
+            this.enterVolumeTextBox = new System.Windows.Forms.TextBox();
+            this.flowrateAnswerLabel = new System.Windows.Forms.Label();
+            this.enterTimeFlowrate = new System.Windows.Forms.Label();
+            this.enterVolumeLabelFlowrate = new System.Windows.Forms.Label();
             this.velocityGroupBox = new System.Windows.Forms.GroupBox();
             this.determineVelocityButton = new System.Windows.Forms.Button();
             this.areaVelocityTextBox = new System.Windows.Forms.TextBox();
@@ -40,6 +47,7 @@
             this.areaLabel2 = new System.Windows.Forms.Label();
             this.flowrateLabel2 = new System.Windows.Forms.Label();
             this.pressureGroupBox = new System.Windows.Forms.GroupBox();
+            this.areaCalcLabel = new System.Windows.Forms.Label();
             this.determinePressureButton = new System.Windows.Forms.Button();
             this.areaTextBox = new System.Windows.Forms.TextBox();
             this.forceTextBox = new System.Windows.Forms.TextBox();
@@ -52,20 +60,13 @@
             this.flowRatePowerTextBox = new System.Windows.Forms.TextBox();
             this.pressureTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.flowRateGroupBox = new System.Windows.Forms.GroupBox();
-            this.enterVolumeLabelFlowrate = new System.Windows.Forms.Label();
-            this.enterTimeFlowrate = new System.Windows.Forms.Label();
-            this.flowrateAnswerLabel = new System.Windows.Forms.Label();
-            this.enterVolumeTextBox = new System.Windows.Forms.TextBox();
-            this.enterTimeTextBox = new System.Windows.Forms.TextBox();
-            this.determineFlowRateButton = new System.Windows.Forms.Button();
-            this.areaCalcLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.flowRateGroupBox.SuspendLayout();
             this.velocityGroupBox.SuspendLayout();
             this.pressureGroupBox.SuspendLayout();
             this.horsepowerGroupBox.SuspendLayout();
-            this.flowRateGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // determineHorsePowerbutton
@@ -115,8 +116,76 @@
             this.tabPage1.Text = "Fluid";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // flowRateGroupBox
+            // 
+            this.flowRateGroupBox.Controls.Add(this.determineFlowRateButton);
+            this.flowRateGroupBox.Controls.Add(this.enterTimeTextBox);
+            this.flowRateGroupBox.Controls.Add(this.enterVolumeTextBox);
+            this.flowRateGroupBox.Controls.Add(this.flowrateAnswerLabel);
+            this.flowRateGroupBox.Controls.Add(this.enterTimeFlowrate);
+            this.flowRateGroupBox.Controls.Add(this.enterVolumeLabelFlowrate);
+            this.flowRateGroupBox.Location = new System.Drawing.Point(416, 19);
+            this.flowRateGroupBox.Name = "flowRateGroupBox";
+            this.flowRateGroupBox.Size = new System.Drawing.Size(363, 118);
+            this.flowRateGroupBox.TabIndex = 7;
+            this.flowRateGroupBox.TabStop = false;
+            this.flowRateGroupBox.Text = "Flowrate";
+            // 
+            // determineFlowRateButton
+            // 
+            this.determineFlowRateButton.Location = new System.Drawing.Point(251, 33);
+            this.determineFlowRateButton.Name = "determineFlowRateButton";
+            this.determineFlowRateButton.Size = new System.Drawing.Size(106, 39);
+            this.determineFlowRateButton.TabIndex = 5;
+            this.determineFlowRateButton.Text = "Determine Flowrate";
+            this.determineFlowRateButton.UseVisualStyleBackColor = true;
+            this.determineFlowRateButton.Click += new System.EventHandler(this.determineFlowRateButton_Click);
+            // 
+            // enterTimeTextBox
+            // 
+            this.enterTimeTextBox.Location = new System.Drawing.Point(120, 56);
+            this.enterTimeTextBox.Name = "enterTimeTextBox";
+            this.enterTimeTextBox.Size = new System.Drawing.Size(87, 20);
+            this.enterTimeTextBox.TabIndex = 4;
+            // 
+            // enterVolumeTextBox
+            // 
+            this.enterVolumeTextBox.Location = new System.Drawing.Point(120, 30);
+            this.enterVolumeTextBox.Name = "enterVolumeTextBox";
+            this.enterVolumeTextBox.Size = new System.Drawing.Size(87, 20);
+            this.enterVolumeTextBox.TabIndex = 3;
+            // 
+            // flowrateAnswerLabel
+            // 
+            this.flowrateAnswerLabel.AutoSize = true;
+            this.flowrateAnswerLabel.Location = new System.Drawing.Point(6, 87);
+            this.flowrateAnswerLabel.Name = "flowrateAnswerLabel";
+            this.flowrateAnswerLabel.Size = new System.Drawing.Size(85, 13);
+            this.flowrateAnswerLabel.TabIndex = 2;
+            this.flowrateAnswerLabel.Text = "The Flowrate is: ";
+            this.flowrateAnswerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // enterTimeFlowrate
+            // 
+            this.enterTimeFlowrate.AutoSize = true;
+            this.enterTimeFlowrate.Location = new System.Drawing.Point(6, 59);
+            this.enterTimeFlowrate.Name = "enterTimeFlowrate";
+            this.enterTimeFlowrate.Size = new System.Drawing.Size(103, 13);
+            this.enterTimeFlowrate.TabIndex = 1;
+            this.enterTimeFlowrate.Text = "Enter Time (minutes)";
+            // 
+            // enterVolumeLabelFlowrate
+            // 
+            this.enterVolumeLabelFlowrate.AutoSize = true;
+            this.enterVolumeLabelFlowrate.Location = new System.Drawing.Point(6, 33);
+            this.enterVolumeLabelFlowrate.Name = "enterVolumeLabelFlowrate";
+            this.enterVolumeLabelFlowrate.Size = new System.Drawing.Size(103, 13);
+            this.enterVolumeLabelFlowrate.TabIndex = 0;
+            this.enterVolumeLabelFlowrate.Text = "Enter Volume (GPM)";
+            // 
             // velocityGroupBox
             // 
+            this.velocityGroupBox.Controls.Add(this.label4);
             this.velocityGroupBox.Controls.Add(this.determineVelocityButton);
             this.velocityGroupBox.Controls.Add(this.areaVelocityTextBox);
             this.velocityGroupBox.Controls.Add(this.flowRateVelocityTextBox);
@@ -196,6 +265,17 @@
             this.pressureGroupBox.TabIndex = 5;
             this.pressureGroupBox.TabStop = false;
             this.pressureGroupBox.Text = "Pressure";
+            // 
+            // areaCalcLabel
+            // 
+            this.areaCalcLabel.AutoSize = true;
+            this.areaCalcLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.areaCalcLabel.Location = new System.Drawing.Point(213, 48);
+            this.areaCalcLabel.Name = "areaCalcLabel";
+            this.areaCalcLabel.Size = new System.Drawing.Size(13, 13);
+            this.areaCalcLabel.TabIndex = 6;
+            this.areaCalcLabel.Text = "?";
+            this.areaCalcLabel.Click += new System.EventHandler(this.areaCalcLabel_Click);
             // 
             // determinePressureButton
             // 
@@ -305,83 +385,18 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // flowRateGroupBox
+            // label4
             // 
-            this.flowRateGroupBox.Controls.Add(this.determineFlowRateButton);
-            this.flowRateGroupBox.Controls.Add(this.enterTimeTextBox);
-            this.flowRateGroupBox.Controls.Add(this.enterVolumeTextBox);
-            this.flowRateGroupBox.Controls.Add(this.flowrateAnswerLabel);
-            this.flowRateGroupBox.Controls.Add(this.enterTimeFlowrate);
-            this.flowRateGroupBox.Controls.Add(this.enterVolumeLabelFlowrate);
-            this.flowRateGroupBox.Location = new System.Drawing.Point(416, 19);
-            this.flowRateGroupBox.Name = "flowRateGroupBox";
-            this.flowRateGroupBox.Size = new System.Drawing.Size(363, 118);
-            this.flowRateGroupBox.TabIndex = 7;
-            this.flowRateGroupBox.TabStop = false;
-            this.flowRateGroupBox.Text = "Flowrate";
-            // 
-            // enterVolumeLabelFlowrate
-            // 
-            this.enterVolumeLabelFlowrate.AutoSize = true;
-            this.enterVolumeLabelFlowrate.Location = new System.Drawing.Point(6, 33);
-            this.enterVolumeLabelFlowrate.Name = "enterVolumeLabelFlowrate";
-            this.enterVolumeLabelFlowrate.Size = new System.Drawing.Size(103, 13);
-            this.enterVolumeLabelFlowrate.TabIndex = 0;
-            this.enterVolumeLabelFlowrate.Text = "Enter Volume (GPM)";
-            // 
-            // enterTimeFlowrate
-            // 
-            this.enterTimeFlowrate.AutoSize = true;
-            this.enterTimeFlowrate.Location = new System.Drawing.Point(6, 59);
-            this.enterTimeFlowrate.Name = "enterTimeFlowrate";
-            this.enterTimeFlowrate.Size = new System.Drawing.Size(103, 13);
-            this.enterTimeFlowrate.TabIndex = 1;
-            this.enterTimeFlowrate.Text = "Enter Time (minutes)";
-            // 
-            // flowrateAnswerLabel
-            // 
-            this.flowrateAnswerLabel.AutoSize = true;
-            this.flowrateAnswerLabel.Location = new System.Drawing.Point(6, 87);
-            this.flowrateAnswerLabel.Name = "flowrateAnswerLabel";
-            this.flowrateAnswerLabel.Size = new System.Drawing.Size(85, 13);
-            this.flowrateAnswerLabel.TabIndex = 2;
-            this.flowrateAnswerLabel.Text = "The Flowrate is: ";
-            this.flowrateAnswerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // enterVolumeTextBox
-            // 
-            this.enterVolumeTextBox.Location = new System.Drawing.Point(120, 30);
-            this.enterVolumeTextBox.Name = "enterVolumeTextBox";
-            this.enterVolumeTextBox.Size = new System.Drawing.Size(87, 20);
-            this.enterVolumeTextBox.TabIndex = 3;
-            // 
-            // enterTimeTextBox
-            // 
-            this.enterTimeTextBox.Location = new System.Drawing.Point(120, 56);
-            this.enterTimeTextBox.Name = "enterTimeTextBox";
-            this.enterTimeTextBox.Size = new System.Drawing.Size(87, 20);
-            this.enterTimeTextBox.TabIndex = 4;
-            // 
-            // determineFlowRateButton
-            // 
-            this.determineFlowRateButton.Location = new System.Drawing.Point(251, 33);
-            this.determineFlowRateButton.Name = "determineFlowRateButton";
-            this.determineFlowRateButton.Size = new System.Drawing.Size(106, 39);
-            this.determineFlowRateButton.TabIndex = 5;
-            this.determineFlowRateButton.Text = "Determine Flowrate";
-            this.determineFlowRateButton.UseVisualStyleBackColor = true;
-            this.determineFlowRateButton.Click += new System.EventHandler(this.determineFlowRateButton_Click);
-            // 
-            // areaCalcLabel
-            // 
-            this.areaCalcLabel.AutoSize = true;
-            this.areaCalcLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.areaCalcLabel.Location = new System.Drawing.Point(213, 48);
-            this.areaCalcLabel.Name = "areaCalcLabel";
-            this.areaCalcLabel.Size = new System.Drawing.Size(13, 13);
-            this.areaCalcLabel.TabIndex = 6;
-            this.areaCalcLabel.Text = "?";
-            this.areaCalcLabel.Click += new System.EventHandler(this.areaCalcLabel_Click);
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.Location = new System.Drawing.Point(213, 48);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label4.Size = new System.Drawing.Size(13, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "?";
+            this.label4.UseMnemonic = false;
+            this.label4.Click += new System.EventHandler(this.areaCalcLabel_Click);
             // 
             // Form1
             // 
@@ -393,14 +408,14 @@
             this.Text = "Hydraulic Test";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.flowRateGroupBox.ResumeLayout(false);
+            this.flowRateGroupBox.PerformLayout();
             this.velocityGroupBox.ResumeLayout(false);
             this.velocityGroupBox.PerformLayout();
             this.pressureGroupBox.ResumeLayout(false);
             this.pressureGroupBox.PerformLayout();
             this.horsepowerGroupBox.ResumeLayout(false);
             this.horsepowerGroupBox.PerformLayout();
-            this.flowRateGroupBox.ResumeLayout(false);
-            this.flowRateGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -438,6 +453,7 @@
         private System.Windows.Forms.Label enterTimeFlowrate;
         private System.Windows.Forms.Label enterVolumeLabelFlowrate;
         private System.Windows.Forms.Label areaCalcLabel;
+        private System.Windows.Forms.Label label4;
     }
 }
 

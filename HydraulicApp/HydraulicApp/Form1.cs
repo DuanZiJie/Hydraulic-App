@@ -17,8 +17,6 @@ namespace HydraulicApp
         string VelocityLabelText = "The velocity is: ";
         string FlowrateLabelText = "The Flowrate is: ";
 
-        static double TempArea { get; set; }
-
         public Form1()
         {
             InitializeComponent();
@@ -68,12 +66,9 @@ namespace HydraulicApp
         private void areaCalcLabel_Click(object sender, EventArgs e)
         {
             AreaForm temp = new AreaForm();
-
             temp.ShowDialog(this);
             areaTextBox.Text = temp.NewArea.ToString("F2");
-
             temp.Dispose();
-            //areaTextBox.Text = TempArea.ToString("F3");  
         }
     }
 }
