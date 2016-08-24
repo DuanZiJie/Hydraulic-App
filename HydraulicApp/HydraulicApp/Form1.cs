@@ -50,7 +50,7 @@ namespace HydraulicApp
             double area;
             double flowRate;
 
-            if (Double.TryParse(flowRateVelocityTextBox.Text, out flowRate) && Double.TryParse(flowRateVelocityTextBox.Text, out area))
+            if (Double.TryParse(flowRateVelocityTextBox.Text, out flowRate) && Double.TryParse(areaVelocityTextBox.Text, out area))
                 velocityAnswerTextBox.Text = VelocityLabelText + Misc.FluidVelocity(flowRate, area).ToString("F2") + " feet per second";
         }
 
@@ -68,6 +68,14 @@ namespace HydraulicApp
             AreaForm temp = new AreaForm();
             temp.ShowDialog(this);
             areaTextBox.Text = temp.NewArea.ToString("F2");
+            temp.Dispose();
+        }
+
+        private void areaCalcVelocityLabel_Click(object sender, EventArgs e)
+        {
+            AreaForm temp = new AreaForm();
+            temp.ShowDialog(this);
+            areaVelocityTextBox.Text = temp.NewArea.ToString("F2");
             temp.Dispose();
         }
     }

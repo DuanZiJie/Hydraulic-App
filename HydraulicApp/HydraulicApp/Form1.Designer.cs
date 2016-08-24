@@ -40,6 +40,7 @@
             this.enterTimeFlowrate = new System.Windows.Forms.Label();
             this.enterVolumeLabelFlowrate = new System.Windows.Forms.Label();
             this.velocityGroupBox = new System.Windows.Forms.GroupBox();
+            this.areaVelocityCalcLabel = new System.Windows.Forms.Label();
             this.determineVelocityButton = new System.Windows.Forms.Button();
             this.areaVelocityTextBox = new System.Windows.Forms.TextBox();
             this.flowRateVelocityTextBox = new System.Windows.Forms.TextBox();
@@ -60,7 +61,6 @@
             this.flowRatePowerTextBox = new System.Windows.Forms.TextBox();
             this.pressureTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.flowRateGroupBox.SuspendLayout();
@@ -185,7 +185,7 @@
             // 
             // velocityGroupBox
             // 
-            this.velocityGroupBox.Controls.Add(this.label4);
+            this.velocityGroupBox.Controls.Add(this.areaVelocityCalcLabel);
             this.velocityGroupBox.Controls.Add(this.determineVelocityButton);
             this.velocityGroupBox.Controls.Add(this.areaVelocityTextBox);
             this.velocityGroupBox.Controls.Add(this.flowRateVelocityTextBox);
@@ -198,6 +198,19 @@
             this.velocityGroupBox.TabIndex = 6;
             this.velocityGroupBox.TabStop = false;
             this.velocityGroupBox.Text = "Velocity";
+            // 
+            // areaVelocityCalcLabel
+            // 
+            this.areaVelocityCalcLabel.AutoSize = true;
+            this.areaVelocityCalcLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.areaVelocityCalcLabel.Location = new System.Drawing.Point(213, 48);
+            this.areaVelocityCalcLabel.Name = "areaVelocityCalcLabel";
+            this.areaVelocityCalcLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.areaVelocityCalcLabel.Size = new System.Drawing.Size(13, 13);
+            this.areaVelocityCalcLabel.TabIndex = 6;
+            this.areaVelocityCalcLabel.Text = "?";
+            this.areaVelocityCalcLabel.UseMnemonic = false;
+            this.areaVelocityCalcLabel.Click += new System.EventHandler(this.areaCalcVelocityLabel_Click);
             // 
             // determineVelocityButton
             // 
@@ -385,19 +398,6 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(213, 48);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(13, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "?";
-            this.label4.UseMnemonic = false;
-            this.label4.Click += new System.EventHandler(this.areaCalcLabel_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,7 +453,7 @@
         private System.Windows.Forms.Label enterTimeFlowrate;
         private System.Windows.Forms.Label enterVolumeLabelFlowrate;
         private System.Windows.Forms.Label areaCalcLabel;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label areaVelocityCalcLabel;
     }
 }
 

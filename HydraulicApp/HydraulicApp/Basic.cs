@@ -35,7 +35,7 @@ namespace HydraulicApp
 
         static public double AreaOfCircle(double dia)
         {
-            return Math.Pow(Math.PI * dia / 2, 2);
+            return Math.PI * Math.Pow(dia / 2, 2);
         }
     }
 }

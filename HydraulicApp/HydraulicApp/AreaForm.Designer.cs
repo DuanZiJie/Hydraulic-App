@@ -38,9 +38,9 @@
             this.enterDIALabel.AutoSize = true;
             this.enterDIALabel.Location = new System.Drawing.Point(27, 78);
             this.enterDIALabel.Name = "enterDIALabel";
-            this.enterDIALabel.Size = new System.Drawing.Size(53, 13);
+            this.enterDIALabel.Size = new System.Drawing.Size(93, 13);
             this.enterDIALabel.TabIndex = 0;
-            this.enterDIALabel.Text = "Enter DIA";
+            this.enterDIALabel.Text = "Enter DIA (inches)";
             // 
             // enterDIATextBox
             // 
