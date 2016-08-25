@@ -17,6 +17,8 @@ namespace HydraulicApp
         string VelocityLabelText = "The velocity is: ";
         string FlowrateLabelText = "The Flowrate is: ";
 
+        string PressureDropHeatLabelText = "The added heat is: ";
+
         public Form1()
         {
             InitializeComponent();
@@ -77,6 +79,15 @@ namespace HydraulicApp
             temp.ShowDialog(this);
             areaVelocityTextBox.Text = temp.NewArea.ToString("F2");
             temp.Dispose();
+        }
+
+        private void determineHeatByPressureButton_Click(object sender, EventArgs e)
+        {
+            double PressureDrop;
+            double Flowrate;
+
+            if (Double.TryParse(pressureDropTextBox.Text, out PressureDrop) && (Double.TryParse(flowrateHeatTextBox.Text, out Flowrate)))
+                heatByPressureDropAnswerTextBox.Text = PressureDropHeatLabelText + Thermal.HeatCausedByPressureDrop(Flowrate, PressureDrop).ToString("F2") + " BTU/HR";
         }
     }
 }

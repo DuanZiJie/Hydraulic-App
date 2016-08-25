@@ -61,12 +61,21 @@
             this.flowRatePowerTextBox = new System.Windows.Forms.TextBox();
             this.pressureTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pressureDropTextBox = new System.Windows.Forms.TextBox();
+            this.flowrateHeatTextBox = new System.Windows.Forms.TextBox();
+            this.determineHeatByPressureButton = new System.Windows.Forms.Button();
+            this.heatByPressureDropAnswerTextBox = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.flowRateGroupBox.SuspendLayout();
             this.velocityGroupBox.SuspendLayout();
             this.pressureGroupBox.SuspendLayout();
             this.horsepowerGroupBox.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // determineHorsePowerbutton
@@ -179,9 +188,9 @@
             this.enterVolumeLabelFlowrate.AutoSize = true;
             this.enterVolumeLabelFlowrate.Location = new System.Drawing.Point(6, 33);
             this.enterVolumeLabelFlowrate.Name = "enterVolumeLabelFlowrate";
-            this.enterVolumeLabelFlowrate.Size = new System.Drawing.Size(103, 13);
+            this.enterVolumeLabelFlowrate.Size = new System.Drawing.Size(93, 13);
             this.enterVolumeLabelFlowrate.TabIndex = 0;
-            this.enterVolumeLabelFlowrate.Text = "Enter Volume (GPM)";
+            this.enterVolumeLabelFlowrate.Text = "Enter Volume (gal)";
             // 
             // velocityGroupBox
             // 
@@ -390,13 +399,80 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(852, 417);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Thermal";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.heatByPressureDropAnswerTextBox);
+            this.groupBox1.Controls.Add(this.determineHeatByPressureButton);
+            this.groupBox1.Controls.Add(this.flowrateHeatTextBox);
+            this.groupBox1.Controls.Add(this.pressureDropTextBox);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Location = new System.Drawing.Point(17, 15);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(363, 118);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Heat Caused by Pressure Loss";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(116, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Enter Press. Drop (PSI)";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 59);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Enter Flowrate (GPM)";
+            // 
+            // pressureDropTextBox
+            // 
+            this.pressureDropTextBox.Location = new System.Drawing.Point(120, 30);
+            this.pressureDropTextBox.Name = "pressureDropTextBox";
+            this.pressureDropTextBox.Size = new System.Drawing.Size(100, 20);
+            this.pressureDropTextBox.TabIndex = 2;
+            // 
+            // flowrateHeatTextBox
+            // 
+            this.flowrateHeatTextBox.Location = new System.Drawing.Point(120, 56);
+            this.flowrateHeatTextBox.Name = "flowrateHeatTextBox";
+            this.flowrateHeatTextBox.Size = new System.Drawing.Size(100, 20);
+            this.flowrateHeatTextBox.TabIndex = 3;
+            // 
+            // determineHeatByPressureButton
+            // 
+            this.determineHeatByPressureButton.Location = new System.Drawing.Point(242, 39);
+            this.determineHeatByPressureButton.Name = "determineHeatByPressureButton";
+            this.determineHeatByPressureButton.Size = new System.Drawing.Size(90, 33);
+            this.determineHeatByPressureButton.TabIndex = 4;
+            this.determineHeatByPressureButton.Text = "Determine Heat";
+            this.determineHeatByPressureButton.UseVisualStyleBackColor = true;
+            this.determineHeatByPressureButton.Click += new System.EventHandler(this.determineHeatByPressureButton_Click);
+            // 
+            // heatByPressureDropAnswerTextBox
+            // 
+            this.heatByPressureDropAnswerTextBox.AutoSize = true;
+            this.heatByPressureDropAnswerTextBox.Location = new System.Drawing.Point(6, 81);
+            this.heatByPressureDropAnswerTextBox.Name = "heatByPressureDropAnswerTextBox";
+            this.heatByPressureDropAnswerTextBox.Size = new System.Drawing.Size(99, 13);
+            this.heatByPressureDropAnswerTextBox.TabIndex = 5;
+            this.heatByPressureDropAnswerTextBox.Text = "The added heat is: ";
             // 
             // Form1
             // 
@@ -416,6 +492,9 @@
             this.pressureGroupBox.PerformLayout();
             this.horsepowerGroupBox.ResumeLayout(false);
             this.horsepowerGroupBox.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -454,6 +533,13 @@
         private System.Windows.Forms.Label enterVolumeLabelFlowrate;
         private System.Windows.Forms.Label areaCalcLabel;
         private System.Windows.Forms.Label areaVelocityCalcLabel;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label heatByPressureDropAnswerTextBox;
+        private System.Windows.Forms.Button determineHeatByPressureButton;
+        private System.Windows.Forms.TextBox flowrateHeatTextBox;
+        private System.Windows.Forms.TextBox pressureDropTextBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
 
