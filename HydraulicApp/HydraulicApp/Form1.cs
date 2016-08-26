@@ -18,6 +18,7 @@ namespace HydraulicApp
         string FlowrateLabelText = "The Flowrate is: ";
 
         string PressureDropHeatLabelText = "The added heat is: ";
+        string CoolingCapityLabelText = "The Cooling Capacity is: ";
 
         public Form1()
         {
@@ -88,6 +89,15 @@ namespace HydraulicApp
 
             if (Double.TryParse(pressureDropTextBox.Text, out PressureDrop) && (Double.TryParse(flowrateHeatTextBox.Text, out Flowrate)))
                 heatByPressureDropAnswerTextBox.Text = PressureDropHeatLabelText + Thermal.HeatCausedByPressureDrop(Flowrate, PressureDrop).ToString("F2") + " BTU/HR";
+        }
+
+        private void determineCoolingButton_Click(object sender, EventArgs e)
+        {
+            double TempDifference;
+            double SurfaceArea;
+
+            if (Double.TryParse(tempDiffCoolingTextbox.Text, out TempDifference) && (Double.TryParse(surfaceAreaCoolingTextBox.Text, out SurfaceArea)))
+                coolingCapacityAnswerLabel.Text = CoolingCapityLabelText + Thermal.ReservoirCoolingCapacity(TempDifference, SurfaceArea).ToString("F2") + " BTU/HR";
         }
     }
 }
