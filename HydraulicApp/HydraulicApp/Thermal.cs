@@ -27,5 +27,10 @@ namespace HydraulicApp
         {
             return flowRate * 1.485 * pressureDrop;
         }
+
+        static public double BTUToHorsepower(double BTU)
+        {
+            return BTU * 0.000393014684819704;
+        }
     }
 }

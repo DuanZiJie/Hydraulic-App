@@ -61,6 +61,18 @@
             this.flowRatePowerTextBox = new System.Windows.Forms.TextBox();
             this.pressureTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.DetermiineHorsepowerFromBTUButton = new System.Windows.Forms.Button();
+            this.enterBTUTextBox = new System.Windows.Forms.TextBox();
+            this.BTUToHorsepowerAnswerLabel = new System.Windows.Forms.Label();
+            this.enterBTULabel = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.determineCoolingButton = new System.Windows.Forms.Button();
+            this.surfaceAreaCoolingTextBox = new System.Windows.Forms.TextBox();
+            this.tempDiffCoolingTextbox = new System.Windows.Forms.TextBox();
+            this.coolingCapacityAnswerLabel = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.heatByPressureDropAnswerTextBox = new System.Windows.Forms.Label();
             this.determineHeatByPressureButton = new System.Windows.Forms.Button();
@@ -68,13 +80,6 @@
             this.pressureDropTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.coolingCapacityAnswerLabel = new System.Windows.Forms.Label();
-            this.tempDiffCoolingTextbox = new System.Windows.Forms.TextBox();
-            this.surfaceAreaCoolingTextBox = new System.Windows.Forms.TextBox();
-            this.determineCoolingButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.flowRateGroupBox.SuspendLayout();
@@ -82,13 +87,14 @@
             this.pressureGroupBox.SuspendLayout();
             this.horsepowerGroupBox.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // determineHorsePowerbutton
             // 
-            this.determineHorsePowerbutton.Location = new System.Drawing.Point(242, 33);
+            this.determineHorsePowerbutton.Location = new System.Drawing.Point(235, 22);
             this.determineHorsePowerbutton.Name = "determineHorsePowerbutton";
             this.determineHorsePowerbutton.Size = new System.Drawing.Size(115, 39);
             this.determineHorsePowerbutton.TabIndex = 2;
@@ -99,11 +105,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 87);
+            this.label1.Location = new System.Drawing.Point(6, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 13);
+            this.label1.Size = new System.Drawing.Size(102, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "The horsepower is: ";
+            this.label1.Text = "The Horsepower is: ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabControl1
@@ -141,16 +147,16 @@
             this.flowRateGroupBox.Controls.Add(this.flowrateAnswerLabel);
             this.flowRateGroupBox.Controls.Add(this.enterTimeFlowrate);
             this.flowRateGroupBox.Controls.Add(this.enterVolumeLabelFlowrate);
-            this.flowRateGroupBox.Location = new System.Drawing.Point(416, 19);
+            this.flowRateGroupBox.Location = new System.Drawing.Point(440, 20);
             this.flowRateGroupBox.Name = "flowRateGroupBox";
-            this.flowRateGroupBox.Size = new System.Drawing.Size(363, 118);
+            this.flowRateGroupBox.Size = new System.Drawing.Size(380, 100);
             this.flowRateGroupBox.TabIndex = 7;
             this.flowRateGroupBox.TabStop = false;
             this.flowRateGroupBox.Text = "Flowrate";
             // 
             // determineFlowRateButton
             // 
-            this.determineFlowRateButton.Location = new System.Drawing.Point(251, 33);
+            this.determineFlowRateButton.Location = new System.Drawing.Point(235, 22);
             this.determineFlowRateButton.Name = "determineFlowRateButton";
             this.determineFlowRateButton.Size = new System.Drawing.Size(106, 39);
             this.determineFlowRateButton.TabIndex = 5;
@@ -160,14 +166,14 @@
             // 
             // enterTimeTextBox
             // 
-            this.enterTimeTextBox.Location = new System.Drawing.Point(120, 56);
+            this.enterTimeTextBox.Location = new System.Drawing.Point(120, 45);
             this.enterTimeTextBox.Name = "enterTimeTextBox";
             this.enterTimeTextBox.Size = new System.Drawing.Size(87, 20);
             this.enterTimeTextBox.TabIndex = 4;
             // 
             // enterVolumeTextBox
             // 
-            this.enterVolumeTextBox.Location = new System.Drawing.Point(120, 30);
+            this.enterVolumeTextBox.Location = new System.Drawing.Point(120, 19);
             this.enterVolumeTextBox.Name = "enterVolumeTextBox";
             this.enterVolumeTextBox.Size = new System.Drawing.Size(87, 20);
             this.enterVolumeTextBox.TabIndex = 3;
@@ -175,7 +181,7 @@
             // flowrateAnswerLabel
             // 
             this.flowrateAnswerLabel.AutoSize = true;
-            this.flowrateAnswerLabel.Location = new System.Drawing.Point(6, 87);
+            this.flowrateAnswerLabel.Location = new System.Drawing.Point(6, 76);
             this.flowrateAnswerLabel.Name = "flowrateAnswerLabel";
             this.flowrateAnswerLabel.Size = new System.Drawing.Size(85, 13);
             this.flowrateAnswerLabel.TabIndex = 2;
@@ -185,7 +191,7 @@
             // enterTimeFlowrate
             // 
             this.enterTimeFlowrate.AutoSize = true;
-            this.enterTimeFlowrate.Location = new System.Drawing.Point(6, 59);
+            this.enterTimeFlowrate.Location = new System.Drawing.Point(6, 48);
             this.enterTimeFlowrate.Name = "enterTimeFlowrate";
             this.enterTimeFlowrate.Size = new System.Drawing.Size(103, 13);
             this.enterTimeFlowrate.TabIndex = 1;
@@ -194,7 +200,7 @@
             // enterVolumeLabelFlowrate
             // 
             this.enterVolumeLabelFlowrate.AutoSize = true;
-            this.enterVolumeLabelFlowrate.Location = new System.Drawing.Point(6, 33);
+            this.enterVolumeLabelFlowrate.Location = new System.Drawing.Point(6, 22);
             this.enterVolumeLabelFlowrate.Name = "enterVolumeLabelFlowrate";
             this.enterVolumeLabelFlowrate.Size = new System.Drawing.Size(93, 13);
             this.enterVolumeLabelFlowrate.TabIndex = 0;
@@ -209,9 +215,9 @@
             this.velocityGroupBox.Controls.Add(this.velocityAnswerTextBox);
             this.velocityGroupBox.Controls.Add(this.areaLabel2);
             this.velocityGroupBox.Controls.Add(this.flowrateLabel2);
-            this.velocityGroupBox.Location = new System.Drawing.Point(19, 281);
+            this.velocityGroupBox.Location = new System.Drawing.Point(20, 260);
             this.velocityGroupBox.Name = "velocityGroupBox";
-            this.velocityGroupBox.Size = new System.Drawing.Size(363, 102);
+            this.velocityGroupBox.Size = new System.Drawing.Size(380, 100);
             this.velocityGroupBox.TabIndex = 6;
             this.velocityGroupBox.TabStop = false;
             this.velocityGroupBox.Text = "Velocity";
@@ -231,9 +237,9 @@
             // 
             // determineVelocityButton
             // 
-            this.determineVelocityButton.Location = new System.Drawing.Point(248, 22);
+            this.determineVelocityButton.Location = new System.Drawing.Point(235, 22);
             this.determineVelocityButton.Name = "determineVelocityButton";
-            this.determineVelocityButton.Size = new System.Drawing.Size(115, 39);
+            this.determineVelocityButton.Size = new System.Drawing.Size(109, 39);
             this.determineVelocityButton.TabIndex = 5;
             this.determineVelocityButton.Text = "Determine Velocity";
             this.determineVelocityButton.UseVisualStyleBackColor = true;
@@ -289,9 +295,9 @@
             this.pressureGroupBox.Controls.Add(this.pressureAnswerTextBox);
             this.pressureGroupBox.Controls.Add(this.enterAreaLabel);
             this.pressureGroupBox.Controls.Add(this.enterForceLabel);
-            this.pressureGroupBox.Location = new System.Drawing.Point(19, 158);
+            this.pressureGroupBox.Location = new System.Drawing.Point(20, 140);
             this.pressureGroupBox.Name = "pressureGroupBox";
-            this.pressureGroupBox.Size = new System.Drawing.Size(363, 104);
+            this.pressureGroupBox.Size = new System.Drawing.Size(380, 100);
             this.pressureGroupBox.TabIndex = 5;
             this.pressureGroupBox.TabStop = false;
             this.pressureGroupBox.Text = "Pressure";
@@ -309,7 +315,7 @@
             // 
             // determinePressureButton
             // 
-            this.determinePressureButton.Location = new System.Drawing.Point(242, 26);
+            this.determinePressureButton.Location = new System.Drawing.Point(235, 22);
             this.determinePressureButton.Name = "determinePressureButton";
             this.determinePressureButton.Size = new System.Drawing.Size(115, 35);
             this.determinePressureButton.TabIndex = 5;
@@ -334,7 +340,7 @@
             // pressureAnswerTextBox
             // 
             this.pressureAnswerTextBox.AutoSize = true;
-            this.pressureAnswerTextBox.Location = new System.Drawing.Point(6, 75);
+            this.pressureAnswerTextBox.Location = new System.Drawing.Point(6, 76);
             this.pressureAnswerTextBox.Name = "pressureAnswerTextBox";
             this.pressureAnswerTextBox.Size = new System.Drawing.Size(85, 13);
             this.pressureAnswerTextBox.TabIndex = 2;
@@ -352,7 +358,7 @@
             // enterForceLabel
             // 
             this.enterForceLabel.AutoSize = true;
-            this.enterForceLabel.Location = new System.Drawing.Point(6, 26);
+            this.enterForceLabel.Location = new System.Drawing.Point(6, 22);
             this.enterForceLabel.Name = "enterForceLabel";
             this.enterForceLabel.Size = new System.Drawing.Size(84, 13);
             this.enterForceLabel.TabIndex = 0;
@@ -366,9 +372,9 @@
             this.horsepowerGroupBox.Controls.Add(this.pressureTextBox);
             this.horsepowerGroupBox.Controls.Add(this.label1);
             this.horsepowerGroupBox.Controls.Add(this.determineHorsePowerbutton);
-            this.horsepowerGroupBox.Location = new System.Drawing.Point(19, 19);
+            this.horsepowerGroupBox.Location = new System.Drawing.Point(20, 20);
             this.horsepowerGroupBox.Name = "horsepowerGroupBox";
-            this.horsepowerGroupBox.Size = new System.Drawing.Size(363, 118);
+            this.horsepowerGroupBox.Size = new System.Drawing.Size(380, 100);
             this.horsepowerGroupBox.TabIndex = 4;
             this.horsepowerGroupBox.TabStop = false;
             this.horsepowerGroupBox.Text = "Horsepower";
@@ -376,7 +382,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 59);
+            this.label3.Location = new System.Drawing.Point(6, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 13);
             this.label3.TabIndex = 5;
@@ -385,7 +391,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 33);
+            this.label2.Location = new System.Drawing.Point(6, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 13);
             this.label2.TabIndex = 4;
@@ -393,20 +399,21 @@
             // 
             // flowRatePowerTextBox
             // 
-            this.flowRatePowerTextBox.Location = new System.Drawing.Point(120, 56);
+            this.flowRatePowerTextBox.Location = new System.Drawing.Point(120, 45);
             this.flowRatePowerTextBox.Name = "flowRatePowerTextBox";
             this.flowRatePowerTextBox.Size = new System.Drawing.Size(87, 20);
             this.flowRatePowerTextBox.TabIndex = 1;
             // 
             // pressureTextBox
             // 
-            this.pressureTextBox.Location = new System.Drawing.Point(120, 30);
+            this.pressureTextBox.Location = new System.Drawing.Point(120, 19);
             this.pressureTextBox.Name = "pressureTextBox";
             this.pressureTextBox.Size = new System.Drawing.Size(87, 20);
             this.pressureTextBox.TabIndex = 0;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -417,71 +424,53 @@
             this.tabPage2.Text = "Thermal";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // groupBox3
             // 
-            this.groupBox1.Controls.Add(this.heatByPressureDropAnswerTextBox);
-            this.groupBox1.Controls.Add(this.determineHeatByPressureButton);
-            this.groupBox1.Controls.Add(this.flowrateHeatTextBox);
-            this.groupBox1.Controls.Add(this.pressureDropTextBox);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(19, 19);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(363, 118);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Heat Caused by Pressure Loss";
+            this.groupBox3.Controls.Add(this.DetermiineHorsepowerFromBTUButton);
+            this.groupBox3.Controls.Add(this.enterBTUTextBox);
+            this.groupBox3.Controls.Add(this.BTUToHorsepowerAnswerLabel);
+            this.groupBox3.Controls.Add(this.enterBTULabel);
+            this.groupBox3.Location = new System.Drawing.Point(20, 260);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(363, 100);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "BTU to Horsepower";
             // 
-            // heatByPressureDropAnswerTextBox
+            // DetermiineHorsepowerFromBTUButton
             // 
-            this.heatByPressureDropAnswerTextBox.AutoSize = true;
-            this.heatByPressureDropAnswerTextBox.Location = new System.Drawing.Point(6, 87);
-            this.heatByPressureDropAnswerTextBox.Name = "heatByPressureDropAnswerTextBox";
-            this.heatByPressureDropAnswerTextBox.Size = new System.Drawing.Size(99, 13);
-            this.heatByPressureDropAnswerTextBox.TabIndex = 5;
-            this.heatByPressureDropAnswerTextBox.Text = "The added heat is: ";
+            this.DetermiineHorsepowerFromBTUButton.Location = new System.Drawing.Point(235, 22);
+            this.DetermiineHorsepowerFromBTUButton.Name = "DetermiineHorsepowerFromBTUButton";
+            this.DetermiineHorsepowerFromBTUButton.Size = new System.Drawing.Size(75, 23);
+            this.DetermiineHorsepowerFromBTUButton.TabIndex = 5;
+            this.DetermiineHorsepowerFromBTUButton.Text = "Determine Horsepower";
+            this.DetermiineHorsepowerFromBTUButton.UseVisualStyleBackColor = true;
+            this.DetermiineHorsepowerFromBTUButton.Click += new System.EventHandler(this.DetermiineHorsepowerFromBTUButton_Click);
             // 
-            // determineHeatByPressureButton
+            // enterBTUTextBox
             // 
-            this.determineHeatByPressureButton.Location = new System.Drawing.Point(242, 39);
-            this.determineHeatByPressureButton.Name = "determineHeatByPressureButton";
-            this.determineHeatByPressureButton.Size = new System.Drawing.Size(90, 33);
-            this.determineHeatByPressureButton.TabIndex = 4;
-            this.determineHeatByPressureButton.Text = "Determine Heat";
-            this.determineHeatByPressureButton.UseVisualStyleBackColor = true;
-            this.determineHeatByPressureButton.Click += new System.EventHandler(this.determineHeatByPressureButton_Click);
+            this.enterBTUTextBox.Location = new System.Drawing.Point(120, 19);
+            this.enterBTUTextBox.Name = "enterBTUTextBox";
+            this.enterBTUTextBox.Size = new System.Drawing.Size(100, 20);
+            this.enterBTUTextBox.TabIndex = 3;
             // 
-            // flowrateHeatTextBox
+            // BTUToHorsepowerAnswerLabel
             // 
-            this.flowrateHeatTextBox.Location = new System.Drawing.Point(120, 56);
-            this.flowrateHeatTextBox.Name = "flowrateHeatTextBox";
-            this.flowrateHeatTextBox.Size = new System.Drawing.Size(100, 20);
-            this.flowrateHeatTextBox.TabIndex = 3;
+            this.BTUToHorsepowerAnswerLabel.AutoSize = true;
+            this.BTUToHorsepowerAnswerLabel.Location = new System.Drawing.Point(6, 48);
+            this.BTUToHorsepowerAnswerLabel.Name = "BTUToHorsepowerAnswerLabel";
+            this.BTUToHorsepowerAnswerLabel.Size = new System.Drawing.Size(10, 13);
+            this.BTUToHorsepowerAnswerLabel.TabIndex = 1;
+            this.BTUToHorsepowerAnswerLabel.Text = "-";
             // 
-            // pressureDropTextBox
+            // enterBTULabel
             // 
-            this.pressureDropTextBox.Location = new System.Drawing.Point(120, 30);
-            this.pressureDropTextBox.Name = "pressureDropTextBox";
-            this.pressureDropTextBox.Size = new System.Drawing.Size(100, 20);
-            this.pressureDropTextBox.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 59);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Enter Flowrate (GPM)";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Enter Press. Drop (PSI)";
+            this.enterBTULabel.AutoSize = true;
+            this.enterBTULabel.Location = new System.Drawing.Point(6, 22);
+            this.enterBTULabel.Name = "enterBTULabel";
+            this.enterBTULabel.Size = new System.Drawing.Size(78, 13);
+            this.enterBTULabel.TabIndex = 0;
+            this.enterBTULabel.Text = "Enter BTU/HR";
             // 
             // groupBox2
             // 
@@ -491,63 +480,129 @@
             this.groupBox2.Controls.Add(this.coolingCapacityAnswerLabel);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(19, 158);
+            this.groupBox2.Location = new System.Drawing.Point(20, 140);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(363, 118);
+            this.groupBox2.Size = new System.Drawing.Size(363, 100);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tank Cooling Capacity";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 29);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Enter Temp Diff (°F)";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 57);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Enter Surf. Area (sqft)";
-            // 
-            // coolingCapacityAnswerLabel
-            // 
-            this.coolingCapacityAnswerLabel.AutoSize = true;
-            this.coolingCapacityAnswerLabel.Location = new System.Drawing.Point(6, 88);
-            this.coolingCapacityAnswerLabel.Name = "coolingCapacityAnswerLabel";
-            this.coolingCapacityAnswerLabel.Size = new System.Drawing.Size(124, 13);
-            this.coolingCapacityAnswerLabel.TabIndex = 2;
-            this.coolingCapacityAnswerLabel.Text = "The Cooling Capacity is: ";
-            // 
-            // tempDiffCoolingTextbox
-            // 
-            this.tempDiffCoolingTextbox.Location = new System.Drawing.Point(120, 26);
-            this.tempDiffCoolingTextbox.Name = "tempDiffCoolingTextbox";
-            this.tempDiffCoolingTextbox.Size = new System.Drawing.Size(100, 20);
-            this.tempDiffCoolingTextbox.TabIndex = 3;
-            // 
-            // surfaceAreaCoolingTextBox
-            // 
-            this.surfaceAreaCoolingTextBox.Location = new System.Drawing.Point(120, 54);
-            this.surfaceAreaCoolingTextBox.Name = "surfaceAreaCoolingTextBox";
-            this.surfaceAreaCoolingTextBox.Size = new System.Drawing.Size(100, 20);
-            this.surfaceAreaCoolingTextBox.TabIndex = 4;
-            // 
             // determineCoolingButton
             // 
-            this.determineCoolingButton.Location = new System.Drawing.Point(242, 29);
+            this.determineCoolingButton.Location = new System.Drawing.Point(235, 22);
             this.determineCoolingButton.Name = "determineCoolingButton";
             this.determineCoolingButton.Size = new System.Drawing.Size(90, 55);
             this.determineCoolingButton.TabIndex = 5;
             this.determineCoolingButton.Text = "Determine Cooling Capacity";
             this.determineCoolingButton.UseVisualStyleBackColor = true;
             this.determineCoolingButton.Click += new System.EventHandler(this.determineCoolingButton_Click);
+            // 
+            // surfaceAreaCoolingTextBox
+            // 
+            this.surfaceAreaCoolingTextBox.Location = new System.Drawing.Point(120, 45);
+            this.surfaceAreaCoolingTextBox.Name = "surfaceAreaCoolingTextBox";
+            this.surfaceAreaCoolingTextBox.Size = new System.Drawing.Size(100, 20);
+            this.surfaceAreaCoolingTextBox.TabIndex = 4;
+            // 
+            // tempDiffCoolingTextbox
+            // 
+            this.tempDiffCoolingTextbox.Location = new System.Drawing.Point(120, 19);
+            this.tempDiffCoolingTextbox.Name = "tempDiffCoolingTextbox";
+            this.tempDiffCoolingTextbox.Size = new System.Drawing.Size(100, 20);
+            this.tempDiffCoolingTextbox.TabIndex = 3;
+            // 
+            // coolingCapacityAnswerLabel
+            // 
+            this.coolingCapacityAnswerLabel.AutoSize = true;
+            this.coolingCapacityAnswerLabel.Location = new System.Drawing.Point(6, 76);
+            this.coolingCapacityAnswerLabel.Name = "coolingCapacityAnswerLabel";
+            this.coolingCapacityAnswerLabel.Size = new System.Drawing.Size(124, 13);
+            this.coolingCapacityAnswerLabel.TabIndex = 2;
+            this.coolingCapacityAnswerLabel.Text = "The Cooling Capacity is: ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 48);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(108, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Enter Surf. Area (sqft)";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Enter Temp Diff (°F)";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.heatByPressureDropAnswerTextBox);
+            this.groupBox1.Controls.Add(this.determineHeatByPressureButton);
+            this.groupBox1.Controls.Add(this.flowrateHeatTextBox);
+            this.groupBox1.Controls.Add(this.pressureDropTextBox);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Location = new System.Drawing.Point(20, 20);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(363, 100);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Heat Caused by Pressure Loss";
+            // 
+            // heatByPressureDropAnswerTextBox
+            // 
+            this.heatByPressureDropAnswerTextBox.AutoSize = true;
+            this.heatByPressureDropAnswerTextBox.Location = new System.Drawing.Point(6, 76);
+            this.heatByPressureDropAnswerTextBox.Name = "heatByPressureDropAnswerTextBox";
+            this.heatByPressureDropAnswerTextBox.Size = new System.Drawing.Size(10, 13);
+            this.heatByPressureDropAnswerTextBox.TabIndex = 5;
+            this.heatByPressureDropAnswerTextBox.Text = "-";
+            // 
+            // determineHeatByPressureButton
+            // 
+            this.determineHeatByPressureButton.Location = new System.Drawing.Point(235, 22);
+            this.determineHeatByPressureButton.Name = "determineHeatByPressureButton";
+            this.determineHeatByPressureButton.Size = new System.Drawing.Size(90, 33);
+            this.determineHeatByPressureButton.TabIndex = 4;
+            this.determineHeatByPressureButton.Text = "Determine Heat";
+            this.determineHeatByPressureButton.UseVisualStyleBackColor = true;
+            this.determineHeatByPressureButton.Click += new System.EventHandler(this.determineHeatByPressureButton_Click);
+            // 
+            // flowrateHeatTextBox
+            // 
+            this.flowrateHeatTextBox.Location = new System.Drawing.Point(120, 45);
+            this.flowrateHeatTextBox.Name = "flowrateHeatTextBox";
+            this.flowrateHeatTextBox.Size = new System.Drawing.Size(100, 20);
+            this.flowrateHeatTextBox.TabIndex = 3;
+            // 
+            // pressureDropTextBox
+            // 
+            this.pressureDropTextBox.Location = new System.Drawing.Point(120, 19);
+            this.pressureDropTextBox.Name = "pressureDropTextBox";
+            this.pressureDropTextBox.Size = new System.Drawing.Size(100, 20);
+            this.pressureDropTextBox.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Enter Flowrate (GPM)";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(116, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Enter Press. Drop (PSI)";
             // 
             // Form1
             // 
@@ -568,10 +623,12 @@
             this.horsepowerGroupBox.ResumeLayout(false);
             this.horsepowerGroupBox.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -624,6 +681,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button determineCoolingButton;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox enterBTUTextBox;
+        private System.Windows.Forms.Label BTUToHorsepowerAnswerLabel;
+        private System.Windows.Forms.Label enterBTULabel;
+        private System.Windows.Forms.Button DetermiineHorsepowerFromBTUButton;
     }
 }
 
