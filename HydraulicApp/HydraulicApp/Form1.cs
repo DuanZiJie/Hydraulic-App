@@ -20,12 +20,14 @@ namespace HydraulicApp
         string PressureDropHeatLabelText = "The Added Heat is: ";
         string CoolingCapityLabelText = "The Cooling Capacity is: ";
         string BTUToHorsepowerLabelText = "The Horsepower is: ";
+        string HeatInFreshWaterLabelText = "The Heat is: ";
 
         public Form1()
         {
             InitializeComponent();
             heatByPressureDropAnswerTextBox.Text = PressureDropHeatLabelText;
             BTUToHorsepowerAnswerLabel.Text = BTUToHorsepowerLabelText;
+            heatInWaterAnswer.Text = HeatInFreshWaterLabelText;
         }
 
         public Form1(double area)
@@ -110,6 +112,15 @@ namespace HydraulicApp
             if (Double.TryParse(enterBTUTextBox.Text, out BTU))
                 BTUToHorsepowerAnswerLabel.Text = BTUToHorsepowerLabelText + Thermal.BTUToHorsepower(BTU).ToString("F2") + " HP";
 
+        }
+
+        private void DetermineHeatInWaterBUtton_Click(object sender, EventArgs e)
+        {
+            double TempDiff;
+            double Flowrate;
+
+            if (Double.TryParse(tempDiffWaterTextBox.Text, out TempDiff) && (Double.TryParse(flowrateHeatInWaterTextBox.Text, out Flowrate)))
+                heatInWaterAnswer.Text = HeatInFreshWaterLabelText + Thermal.HeatInFreshWater(Flowrate, TempDiff).ToString("F2") + " BTU/HR";
         }
     }
 }

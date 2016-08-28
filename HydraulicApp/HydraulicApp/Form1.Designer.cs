@@ -80,6 +80,13 @@
             this.pressureDropTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.heatInWaterAnswer = new System.Windows.Forms.Label();
+            this.tempDiffWaterTextBox = new System.Windows.Forms.TextBox();
+            this.flowrateHeatInWaterTextBox = new System.Windows.Forms.TextBox();
+            this.DetermineHeatInWaterBUtton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.flowRateGroupBox.SuspendLayout();
@@ -90,6 +97,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // determineHorsePowerbutton
@@ -413,6 +421,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.groupBox1);
@@ -441,7 +450,7 @@
             // 
             this.DetermiineHorsepowerFromBTUButton.Location = new System.Drawing.Point(235, 22);
             this.DetermiineHorsepowerFromBTUButton.Name = "DetermiineHorsepowerFromBTUButton";
-            this.DetermiineHorsepowerFromBTUButton.Size = new System.Drawing.Size(75, 23);
+            this.DetermiineHorsepowerFromBTUButton.Size = new System.Drawing.Size(90, 39);
             this.DetermiineHorsepowerFromBTUButton.TabIndex = 5;
             this.DetermiineHorsepowerFromBTUButton.Text = "Determine Horsepower";
             this.DetermiineHorsepowerFromBTUButton.UseVisualStyleBackColor = true;
@@ -604,6 +613,72 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Enter Press. Drop (PSI)";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.DetermineHeatInWaterBUtton);
+            this.groupBox4.Controls.Add(this.flowrateHeatInWaterTextBox);
+            this.groupBox4.Controls.Add(this.tempDiffWaterTextBox);
+            this.groupBox4.Controls.Add(this.heatInWaterAnswer);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Location = new System.Drawing.Point(440, 20);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(363, 100);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Heat In Fresh Water";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Enter Temp Diff (°F)";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 48);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 13);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Enter Flowrate (GPM)";
+            // 
+            // heatInWaterAnswer
+            // 
+            this.heatInWaterAnswer.AutoSize = true;
+            this.heatInWaterAnswer.Location = new System.Drawing.Point(6, 76);
+            this.heatInWaterAnswer.Name = "heatInWaterAnswer";
+            this.heatInWaterAnswer.Size = new System.Drawing.Size(10, 13);
+            this.heatInWaterAnswer.TabIndex = 2;
+            this.heatInWaterAnswer.Text = "-";
+            // 
+            // tempDiffWaterTextBox
+            // 
+            this.tempDiffWaterTextBox.Location = new System.Drawing.Point(120, 19);
+            this.tempDiffWaterTextBox.Name = "tempDiffWaterTextBox";
+            this.tempDiffWaterTextBox.Size = new System.Drawing.Size(100, 20);
+            this.tempDiffWaterTextBox.TabIndex = 3;
+            // 
+            // flowrateHeatInWaterTextBox
+            // 
+            this.flowrateHeatInWaterTextBox.Location = new System.Drawing.Point(120, 45);
+            this.flowrateHeatInWaterTextBox.Name = "flowrateHeatInWaterTextBox";
+            this.flowrateHeatInWaterTextBox.Size = new System.Drawing.Size(100, 20);
+            this.flowrateHeatInWaterTextBox.TabIndex = 4;
+            // 
+            // DetermineHeatInWaterBUtton
+            // 
+            this.DetermineHeatInWaterBUtton.Location = new System.Drawing.Point(235, 22);
+            this.DetermineHeatInWaterBUtton.Name = "DetermineHeatInWaterBUtton";
+            this.DetermineHeatInWaterBUtton.Size = new System.Drawing.Size(90, 33);
+            this.DetermineHeatInWaterBUtton.TabIndex = 5;
+            this.DetermineHeatInWaterBUtton.Text = "Determine Heat";
+            this.DetermineHeatInWaterBUtton.UseVisualStyleBackColor = true;
+            this.DetermineHeatInWaterBUtton.Click += new System.EventHandler(this.DetermineHeatInWaterBUtton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -629,6 +704,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -686,6 +763,13 @@
         private System.Windows.Forms.Label BTUToHorsepowerAnswerLabel;
         private System.Windows.Forms.Label enterBTULabel;
         private System.Windows.Forms.Button DetermiineHorsepowerFromBTUButton;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button DetermineHeatInWaterBUtton;
+        private System.Windows.Forms.TextBox flowrateHeatInWaterTextBox;
+        private System.Windows.Forms.TextBox tempDiffWaterTextBox;
+        private System.Windows.Forms.Label heatInWaterAnswer;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }
 
