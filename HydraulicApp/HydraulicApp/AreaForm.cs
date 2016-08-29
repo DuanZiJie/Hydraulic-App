@@ -21,8 +21,17 @@ namespace HydraulicApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            NewArea = Basic.AreaOfCircle(Convert.ToDouble(enterDIATextBox.Text));
-            this.Hide();
+            double DIA;
+
+            if (Double.TryParse(enterDIATextBox.Text, out DIA))
+            {
+                NewArea = Basic.AreaOfCircle(DIA);
+                this.Hide();
+            }
+            else
+            {
+                enterDIAWarningLabel.Show();
+            }
         }
     }
 }
