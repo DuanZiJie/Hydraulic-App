@@ -22,12 +22,15 @@ namespace HydraulicApp
         string BTUToHorsepowerLabelText = "The Horsepower is: ";
         string HeatInFreshWaterLabelText = "The Heat is: ";
 
+        string AreaLabelText = "The Area is: ";
+
         public Form1()
         {
             InitializeComponent();
             heatByPressureDropAnswerTextBox.Text = PressureDropHeatLabelText;
             BTUToHorsepowerAnswerLabel.Text = BTUToHorsepowerLabelText;
             heatInWaterAnswer.Text = HeatInFreshWaterLabelText;
+            areaOfRodEndAnswerLabel.Text = AreaLabelText;
         }
 
         public Form1(double area)
@@ -121,6 +124,15 @@ namespace HydraulicApp
 
             if (Double.TryParse(tempDiffWaterTextBox.Text, out TempDiff) && (Double.TryParse(flowrateHeatInWaterTextBox.Text, out Flowrate)))
                 heatInWaterAnswer.Text = HeatInFreshWaterLabelText + Thermal.HeatInFreshWater(Flowrate, TempDiff).ToString("F2") + " BTU/HR";
+        }
+
+        private void determineAreaOfRodEndButton_Click(object sender, EventArgs e)
+        {
+            double DiaOfCylinder;
+            double DiaOfRod;
+
+            if (Double.TryParse(cylinderDiaTextBox.Text, out DiaOfCylinder) && Double.TryParse(cylinderRodDiaTextBox.Text, out DiaOfRod))
+                areaOfRodEndAnswerLabel.Text = AreaLabelText + Cylinder.CylinderAreaRodEnd(DiaOfCylinder, DiaOfRod).ToString("F2") + " in^2";
         }
     }
 }

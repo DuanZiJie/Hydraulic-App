@@ -15,7 +15,7 @@ namespace HydraulicApp
 
         public static double CylinderAreaRodEnd(double diaOfPiston, double diaOfRod)
         {
-            return Math.Pow((Math.PI * diaOfPiston), 2) - Math.Pow((Math.PI * diaOfRod),2);
+            return Math.PI * Math.Pow((diaOfPiston/2), 2) - Math.PI * Math.Pow((diaOfRod/2),2);
         }
 
         public static double CylinderForce(double pressure, double area)
