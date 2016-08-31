@@ -23,6 +23,7 @@ namespace HydraulicApp
         string HeatInFreshWaterLabelText = "The Heat is: ";
 
         string AreaLabelText = "The Area is: ";
+        string CylinderSpeedAnswerText = "The Speed is: ";
 
         public Form1()
         {
@@ -31,6 +32,7 @@ namespace HydraulicApp
             BTUToHorsepowerAnswerLabel.Text = BTUToHorsepowerLabelText;
             heatInWaterAnswer.Text = HeatInFreshWaterLabelText;
             areaOfRodEndAnswerLabel.Text = AreaLabelText;
+            cylSpeedAnswerLabel.Text = CylinderSpeedAnswerText;
         }
 
         public Form1(double area)
@@ -90,6 +92,14 @@ namespace HydraulicApp
             temp.Dispose();
         }
 
+        private void areaCalcCylSpeedlabel_Click(object sender, EventArgs e)
+        {
+            AreaForm temp = new AreaForm();
+            temp.ShowDialog(this);
+            areaCylSpeedTextBox.Text = temp.NewArea.ToString("F2");
+            temp.Dispose();
+        }
+
         private void determineHeatByPressureButton_Click(object sender, EventArgs e)
         {
             double PressureDrop;
@@ -133,6 +143,17 @@ namespace HydraulicApp
 
             if (Double.TryParse(cylinderDiaTextBox.Text, out DiaOfCylinder) && Double.TryParse(cylinderRodDiaTextBox.Text, out DiaOfRod))
                 areaOfRodEndAnswerLabel.Text = AreaLabelText + Cylinder.CylinderAreaRodEnd(DiaOfCylinder, DiaOfRod).ToString("F2") + " in^2";
+        }
+
+        private void determineCylSpeedButton_Click(object sender, EventArgs e)
+        {
+            double Flowrate;
+            double Area;
+
+            if(Double.TryParse(flowrateCylSpedTextBox.Text, out Flowrate) && Double.TryParse(areaCylSpeedTextBox.Text, out Area))
+            {
+                cylSpeedAnswerLabel.Text = CylinderSpeedAnswerText + Cylinder.CylinderSpeed(Flowrate, Area).ToString("F2") + " feet per second";
+            }
         }
     }
 }

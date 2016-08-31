@@ -12,6 +12,7 @@ namespace HydraulicApp
         public double MaxPressure { get; set; }
         public double Efficiency { get; set; }
         public double MaxRPM { get; set; }
+        public string Name { get; set; }
 
         public Pump(double displacement, double maxPressure, double maxRPM)
         {
