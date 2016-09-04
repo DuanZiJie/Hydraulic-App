@@ -33,6 +33,7 @@ namespace HydraulicApp
             heatInWaterAnswer.Text = HeatInFreshWaterLabelText;
             areaOfRodEndAnswerLabel.Text = AreaLabelText;
             cylSpeedAnswerLabel.Text = CylinderSpeedAnswerText;
+            cylSpeedRodEndAnswerLabel.Text = CylinderSpeedAnswerText;
         }
 
         public Form1(double area)
@@ -154,6 +155,16 @@ namespace HydraulicApp
             {
                 cylSpeedAnswerLabel.Text = CylinderSpeedAnswerText + Cylinder.CylinderSpeed(Flowrate, Area).ToString("F2") + " feet per second";
             }
+        }
+
+        private void determineCylinderSpeedRodEnd_Click(object sender, EventArgs e)
+        {
+            double Flowrate;
+            double PistonArea;
+            double RodArea;
+
+            if(Double.TryParse(flowrateRodEndTextBox.Text, out Flowrate) && Double.TryParse(pistonAreaRodSpeedTextBox.Text, out PistonArea) && Double.TryParse(rodAreaTextBox.Text, out RodArea))
+                cylSpeedRodEndAnswerLabel.Text = CylinderSpeedAnswerText + Cylinder.CylinderSpeedRodEnd(Flowrate, PistonArea, RodArea).ToString("F2") + " feet per second";
         }
     }
 }

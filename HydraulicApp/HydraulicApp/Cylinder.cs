@@ -28,6 +28,11 @@ namespace HydraulicApp
             return (231 * flowRate) / (12 * 60 * cylinderArea);
         }
 
+        public static double CylinderSpeedRodEnd(double flowRate, double pistonArea, double rodArea)
+        {
+            return (231 * flowRate) / (12 * 60 * (pistonArea - rodArea));
+        }
+
         public static double CyilnderVolume(double cylinderStroke, double area)
         {
             return cylinderStroke * area;

@@ -88,7 +88,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.determineCylinderSpeedRodEnd = new System.Windows.Forms.Button();
+            this.pistonAreaRodSpeedTextBox = new System.Windows.Forms.TextBox();
+            this.flowrateRodEndTextBox = new System.Windows.Forms.TextBox();
+            this.cylSpeedRodEndAnswerLabel = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.areaCalcCylSpeedlabel = new System.Windows.Forms.Label();
             this.determineCylSpeedButton = new System.Windows.Forms.Button();
             this.areaCylSpeedTextBox = new System.Windows.Forms.TextBox();
             this.flowrateCylSpedTextBox = new System.Windows.Forms.TextBox();
@@ -102,7 +110,8 @@
             this.areaOfRodEndAnswerLabel = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.areaCalcCylSpeedlabel = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.rodAreaTextBox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.flowRateGroupBox.SuspendLayout();
@@ -115,6 +124,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
@@ -482,14 +492,14 @@
             // 
             this.flowrateHeatInWaterTextBox.Location = new System.Drawing.Point(120, 45);
             this.flowrateHeatInWaterTextBox.Name = "flowrateHeatInWaterTextBox";
-            this.flowrateHeatInWaterTextBox.Size = new System.Drawing.Size(100, 20);
+            this.flowrateHeatInWaterTextBox.Size = new System.Drawing.Size(87, 20);
             this.flowrateHeatInWaterTextBox.TabIndex = 4;
             // 
             // tempDiffWaterTextBox
             // 
             this.tempDiffWaterTextBox.Location = new System.Drawing.Point(120, 19);
             this.tempDiffWaterTextBox.Name = "tempDiffWaterTextBox";
-            this.tempDiffWaterTextBox.Size = new System.Drawing.Size(100, 20);
+            this.tempDiffWaterTextBox.Size = new System.Drawing.Size(87, 20);
             this.tempDiffWaterTextBox.TabIndex = 3;
             // 
             // heatInWaterAnswer
@@ -546,7 +556,7 @@
             // 
             this.enterBTUTextBox.Location = new System.Drawing.Point(120, 19);
             this.enterBTUTextBox.Name = "enterBTUTextBox";
-            this.enterBTUTextBox.Size = new System.Drawing.Size(100, 20);
+            this.enterBTUTextBox.Size = new System.Drawing.Size(87, 20);
             this.enterBTUTextBox.TabIndex = 3;
             // 
             // BTUToHorsepowerAnswerLabel
@@ -596,14 +606,14 @@
             // 
             this.surfaceAreaCoolingTextBox.Location = new System.Drawing.Point(120, 45);
             this.surfaceAreaCoolingTextBox.Name = "surfaceAreaCoolingTextBox";
-            this.surfaceAreaCoolingTextBox.Size = new System.Drawing.Size(100, 20);
+            this.surfaceAreaCoolingTextBox.Size = new System.Drawing.Size(87, 20);
             this.surfaceAreaCoolingTextBox.TabIndex = 4;
             // 
             // tempDiffCoolingTextbox
             // 
             this.tempDiffCoolingTextbox.Location = new System.Drawing.Point(120, 19);
             this.tempDiffCoolingTextbox.Name = "tempDiffCoolingTextbox";
-            this.tempDiffCoolingTextbox.Size = new System.Drawing.Size(100, 20);
+            this.tempDiffCoolingTextbox.Size = new System.Drawing.Size(87, 20);
             this.tempDiffCoolingTextbox.TabIndex = 3;
             // 
             // coolingCapacityAnswerLabel
@@ -671,14 +681,14 @@
             // 
             this.flowrateHeatTextBox.Location = new System.Drawing.Point(120, 45);
             this.flowrateHeatTextBox.Name = "flowrateHeatTextBox";
-            this.flowrateHeatTextBox.Size = new System.Drawing.Size(100, 20);
+            this.flowrateHeatTextBox.Size = new System.Drawing.Size(87, 20);
             this.flowrateHeatTextBox.TabIndex = 3;
             // 
             // pressureDropTextBox
             // 
             this.pressureDropTextBox.Location = new System.Drawing.Point(120, 19);
             this.pressureDropTextBox.Name = "pressureDropTextBox";
-            this.pressureDropTextBox.Size = new System.Drawing.Size(100, 20);
+            this.pressureDropTextBox.Size = new System.Drawing.Size(87, 20);
             this.pressureDropTextBox.TabIndex = 2;
             // 
             // label5
@@ -701,6 +711,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox7);
             this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -710,6 +721,74 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Cylinder";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.rodAreaTextBox);
+            this.groupBox7.Controls.Add(this.label17);
+            this.groupBox7.Controls.Add(this.determineCylinderSpeedRodEnd);
+            this.groupBox7.Controls.Add(this.pistonAreaRodSpeedTextBox);
+            this.groupBox7.Controls.Add(this.flowrateRodEndTextBox);
+            this.groupBox7.Controls.Add(this.cylSpeedRodEndAnswerLabel);
+            this.groupBox7.Controls.Add(this.label15);
+            this.groupBox7.Controls.Add(this.label14);
+            this.groupBox7.Location = new System.Drawing.Point(20, 260);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(363, 126);
+            this.groupBox7.TabIndex = 2;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Cylinder Speed Rod End";
+            // 
+            // determineCylinderSpeedRodEnd
+            // 
+            this.determineCylinderSpeedRodEnd.Location = new System.Drawing.Point(235, 22);
+            this.determineCylinderSpeedRodEnd.Name = "determineCylinderSpeedRodEnd";
+            this.determineCylinderSpeedRodEnd.Size = new System.Drawing.Size(82, 39);
+            this.determineCylinderSpeedRodEnd.TabIndex = 6;
+            this.determineCylinderSpeedRodEnd.Text = "Determine Speed";
+            this.determineCylinderSpeedRodEnd.UseVisualStyleBackColor = true;
+            this.determineCylinderSpeedRodEnd.Click += new System.EventHandler(this.determineCylinderSpeedRodEnd_Click);
+            // 
+            // pistonAreaRodSpeedTextBox
+            // 
+            this.pistonAreaRodSpeedTextBox.Location = new System.Drawing.Point(120, 45);
+            this.pistonAreaRodSpeedTextBox.Name = "pistonAreaRodSpeedTextBox";
+            this.pistonAreaRodSpeedTextBox.Size = new System.Drawing.Size(87, 20);
+            this.pistonAreaRodSpeedTextBox.TabIndex = 4;
+            // 
+            // flowrateRodEndTextBox
+            // 
+            this.flowrateRodEndTextBox.Location = new System.Drawing.Point(120, 19);
+            this.flowrateRodEndTextBox.Name = "flowrateRodEndTextBox";
+            this.flowrateRodEndTextBox.Size = new System.Drawing.Size(87, 20);
+            this.flowrateRodEndTextBox.TabIndex = 3;
+            // 
+            // cylSpeedRodEndAnswerLabel
+            // 
+            this.cylSpeedRodEndAnswerLabel.AutoSize = true;
+            this.cylSpeedRodEndAnswerLabel.Location = new System.Drawing.Point(6, 100);
+            this.cylSpeedRodEndAnswerLabel.Name = "cylSpeedRodEndAnswerLabel";
+            this.cylSpeedRodEndAnswerLabel.Size = new System.Drawing.Size(10, 13);
+            this.cylSpeedRodEndAnswerLabel.TabIndex = 2;
+            this.cylSpeedRodEndAnswerLabel.Text = "-";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 39);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(64, 26);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Enter Piston\r\nArea (in^2)";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 22);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(108, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Enter Flowrate (GPM)";
             // 
             // groupBox6
             // 
@@ -725,7 +804,18 @@
             this.groupBox6.Size = new System.Drawing.Size(363, 100);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Cylinder Speed";
+            this.groupBox6.Text = "Cylinder Speed Cap End";
+            // 
+            // areaCalcCylSpeedlabel
+            // 
+            this.areaCalcCylSpeedlabel.AutoSize = true;
+            this.areaCalcCylSpeedlabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.areaCalcCylSpeedlabel.Location = new System.Drawing.Point(213, 48);
+            this.areaCalcCylSpeedlabel.Name = "areaCalcCylSpeedlabel";
+            this.areaCalcCylSpeedlabel.Size = new System.Drawing.Size(13, 13);
+            this.areaCalcCylSpeedlabel.TabIndex = 6;
+            this.areaCalcCylSpeedlabel.Text = "?";
+            this.areaCalcCylSpeedlabel.Click += new System.EventHandler(this.areaCalcCylSpeedlabel_Click);
             // 
             // determineCylSpeedButton
             // 
@@ -844,16 +934,21 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Enter Cylinder DIA (in.)";
             // 
-            // areaCalcCylSpeedlabel
+            // label17
             // 
-            this.areaCalcCylSpeedlabel.AutoSize = true;
-            this.areaCalcCylSpeedlabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.areaCalcCylSpeedlabel.Location = new System.Drawing.Point(213, 48);
-            this.areaCalcCylSpeedlabel.Name = "areaCalcCylSpeedlabel";
-            this.areaCalcCylSpeedlabel.Size = new System.Drawing.Size(13, 13);
-            this.areaCalcCylSpeedlabel.TabIndex = 6;
-            this.areaCalcCylSpeedlabel.Text = "?";
-            this.areaCalcCylSpeedlabel.Click += new System.EventHandler(this.areaCalcCylSpeedlabel_Click);
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 70);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(58, 26);
+            this.label17.TabIndex = 7;
+            this.label17.Text = "Enter Rod\r\nArea (in^2)";
+            // 
+            // rodAreaTextBox
+            // 
+            this.rodAreaTextBox.Location = new System.Drawing.Point(120, 71);
+            this.rodAreaTextBox.Name = "rodAreaTextBox";
+            this.rodAreaTextBox.Size = new System.Drawing.Size(87, 20);
+            this.rodAreaTextBox.TabIndex = 8;
             // 
             // Form1
             // 
@@ -883,6 +978,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -967,6 +1064,15 @@
         private System.Windows.Forms.TextBox areaCylSpeedTextBox;
         private System.Windows.Forms.TextBox flowrateCylSpedTextBox;
         private System.Windows.Forms.Label areaCalcCylSpeedlabel;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label cylSpeedRodEndAnswerLabel;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button determineCylinderSpeedRodEnd;
+        private System.Windows.Forms.TextBox pistonAreaRodSpeedTextBox;
+        private System.Windows.Forms.TextBox flowrateRodEndTextBox;
+        private System.Windows.Forms.TextBox rodAreaTextBox;
+        private System.Windows.Forms.Label label17;
     }
 }
 
