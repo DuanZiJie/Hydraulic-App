@@ -89,6 +89,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.rodAreaTextBox = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.determineCylinderSpeedRodEnd = new System.Windows.Forms.Button();
             this.pistonAreaRodSpeedTextBox = new System.Windows.Forms.TextBox();
             this.flowrateRodEndTextBox = new System.Windows.Forms.TextBox();
@@ -110,8 +112,8 @@
             this.areaOfRodEndAnswerLabel = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.rodAreaTextBox = new System.Windows.Forms.TextBox();
+            this.areaCalcPistonAreaLabel = new System.Windows.Forms.Label();
+            this.areaCalcRodLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.flowRateGroupBox.SuspendLayout();
@@ -724,6 +726,8 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.areaCalcRodLabel);
+            this.groupBox7.Controls.Add(this.areaCalcPistonAreaLabel);
             this.groupBox7.Controls.Add(this.rodAreaTextBox);
             this.groupBox7.Controls.Add(this.label17);
             this.groupBox7.Controls.Add(this.determineCylinderSpeedRodEnd);
@@ -738,6 +742,22 @@
             this.groupBox7.TabIndex = 2;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Cylinder Speed Rod End";
+            // 
+            // rodAreaTextBox
+            // 
+            this.rodAreaTextBox.Location = new System.Drawing.Point(120, 71);
+            this.rodAreaTextBox.Name = "rodAreaTextBox";
+            this.rodAreaTextBox.Size = new System.Drawing.Size(87, 20);
+            this.rodAreaTextBox.TabIndex = 8;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 70);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(58, 26);
+            this.label17.TabIndex = 7;
+            this.label17.Text = "Enter Rod\r\nArea (in^2)";
             // 
             // determineCylinderSpeedRodEnd
             // 
@@ -934,21 +954,27 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Enter Cylinder DIA (in.)";
             // 
-            // label17
+            // areaCalcPistonAreaLabel
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 70);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(58, 26);
-            this.label17.TabIndex = 7;
-            this.label17.Text = "Enter Rod\r\nArea (in^2)";
+            this.areaCalcPistonAreaLabel.AutoSize = true;
+            this.areaCalcPistonAreaLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.areaCalcPistonAreaLabel.Location = new System.Drawing.Point(213, 48);
+            this.areaCalcPistonAreaLabel.Name = "areaCalcPistonAreaLabel";
+            this.areaCalcPistonAreaLabel.Size = new System.Drawing.Size(13, 13);
+            this.areaCalcPistonAreaLabel.TabIndex = 9;
+            this.areaCalcPistonAreaLabel.Text = "?";
+            this.areaCalcPistonAreaLabel.Click += new System.EventHandler(this.areaCalcPistonAreaLabel_Click);
             // 
-            // rodAreaTextBox
+            // areaCalcRodLabel
             // 
-            this.rodAreaTextBox.Location = new System.Drawing.Point(120, 71);
-            this.rodAreaTextBox.Name = "rodAreaTextBox";
-            this.rodAreaTextBox.Size = new System.Drawing.Size(87, 20);
-            this.rodAreaTextBox.TabIndex = 8;
+            this.areaCalcRodLabel.AutoSize = true;
+            this.areaCalcRodLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.areaCalcRodLabel.Location = new System.Drawing.Point(213, 74);
+            this.areaCalcRodLabel.Name = "areaCalcRodLabel";
+            this.areaCalcRodLabel.Size = new System.Drawing.Size(13, 13);
+            this.areaCalcRodLabel.TabIndex = 10;
+            this.areaCalcRodLabel.Text = "?";
+            this.areaCalcRodLabel.Click += new System.EventHandler(this.areaCalcRodLabel_Click);
             // 
             // Form1
             // 
@@ -1073,6 +1099,8 @@
         private System.Windows.Forms.TextBox flowrateRodEndTextBox;
         private System.Windows.Forms.TextBox rodAreaTextBox;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label areaCalcRodLabel;
+        private System.Windows.Forms.Label areaCalcPistonAreaLabel;
     }
 }
 

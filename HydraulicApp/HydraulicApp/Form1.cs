@@ -101,6 +101,22 @@ namespace HydraulicApp
             temp.Dispose();
         }
 
+        private void areaCalcPistonAreaLabel_Click(object sender, EventArgs e)
+        {
+            AreaForm temp = new AreaForm();
+            temp.ShowDialog(this);
+            pistonAreaRodSpeedTextBox.Text = temp.NewArea.ToString("F2");
+            temp.Dispose();
+        }
+
+        private void areaCalcRodLabel_Click(object sender, EventArgs e)
+        {
+            AreaForm temp = new AreaForm();
+            temp.ShowDialog(this);
+            rodAreaTextBox.Text = temp.NewArea.ToString("F2");
+            temp.Dispose();
+        }
+
         private void determineHeatByPressureButton_Click(object sender, EventArgs e)
         {
             double PressureDrop;
