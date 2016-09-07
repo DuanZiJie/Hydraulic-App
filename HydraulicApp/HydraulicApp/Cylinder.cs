@@ -35,7 +35,7 @@ namespace HydraulicApp
 
         public static double CyilnderVolume(double cylinderStroke, double area)
         {
-            return cylinderStroke * area;
+            return cylinderStroke * area / 231;
         }
 
         public static double CylinderFlowRate(double velocity, double area)

@@ -61,7 +61,7 @@
             this.flowRatePowerTextBox = new System.Windows.Forms.TextBox();
             this.pressureTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.heatInFreshWater = new System.Windows.Forms.GroupBox();
             this.DetermineHeatInWaterBUtton = new System.Windows.Forms.Button();
             this.flowrateHeatInWaterTextBox = new System.Windows.Forms.TextBox();
             this.tempDiffWaterTextBox = new System.Windows.Forms.TextBox();
@@ -88,7 +88,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.determineVolumeRodEndButton = new System.Windows.Forms.Button();
+            this.enterPistonAreaVolumeTextBox = new System.Windows.Forms.TextBox();
+            this.cylinderStrokeTextBox = new System.Windows.Forms.TextBox();
+            this.cylinderVolumeCapEndAnswerLabel = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.areaCalcRodLabel = new System.Windows.Forms.Label();
+            this.areaCalcPistonAreaLabel = new System.Windows.Forms.Label();
             this.rodAreaTextBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.determineCylinderSpeedRodEnd = new System.Windows.Forms.Button();
@@ -112,8 +121,7 @@
             this.areaOfRodEndAnswerLabel = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.areaCalcPistonAreaLabel = new System.Windows.Forms.Label();
-            this.areaCalcRodLabel = new System.Windows.Forms.Label();
+            this.capEndVolumeAreaLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.flowRateGroupBox.SuspendLayout();
@@ -121,11 +129,12 @@
             this.pressureGroupBox.SuspendLayout();
             this.horsepowerGroupBox.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.heatInFreshWater.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -453,7 +462,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.groupBox4);
+            this.tabPage2.Controls.Add(this.heatInFreshWater);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.groupBox1);
@@ -465,20 +474,20 @@
             this.tabPage2.Text = "Thermal";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // groupBox4
+            // heatInFreshWater
             // 
-            this.groupBox4.Controls.Add(this.DetermineHeatInWaterBUtton);
-            this.groupBox4.Controls.Add(this.flowrateHeatInWaterTextBox);
-            this.groupBox4.Controls.Add(this.tempDiffWaterTextBox);
-            this.groupBox4.Controls.Add(this.heatInWaterAnswer);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Location = new System.Drawing.Point(440, 20);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(363, 100);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Heat In Fresh Water";
+            this.heatInFreshWater.Controls.Add(this.DetermineHeatInWaterBUtton);
+            this.heatInFreshWater.Controls.Add(this.flowrateHeatInWaterTextBox);
+            this.heatInFreshWater.Controls.Add(this.tempDiffWaterTextBox);
+            this.heatInFreshWater.Controls.Add(this.heatInWaterAnswer);
+            this.heatInFreshWater.Controls.Add(this.label9);
+            this.heatInFreshWater.Controls.Add(this.label8);
+            this.heatInFreshWater.Location = new System.Drawing.Point(440, 20);
+            this.heatInFreshWater.Name = "heatInFreshWater";
+            this.heatInFreshWater.Size = new System.Drawing.Size(363, 100);
+            this.heatInFreshWater.TabIndex = 3;
+            this.heatInFreshWater.TabStop = false;
+            this.heatInFreshWater.Text = "Heat In Fresh Water";
             // 
             // DetermineHeatInWaterBUtton
             // 
@@ -713,6 +722,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox8);
             this.tabPage3.Controls.Add(this.groupBox7);
             this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Controls.Add(this.groupBox5);
@@ -723,6 +733,73 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Cylinder";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.capEndVolumeAreaLabel);
+            this.groupBox8.Controls.Add(this.determineVolumeRodEndButton);
+            this.groupBox8.Controls.Add(this.enterPistonAreaVolumeTextBox);
+            this.groupBox8.Controls.Add(this.cylinderStrokeTextBox);
+            this.groupBox8.Controls.Add(this.cylinderVolumeCapEndAnswerLabel);
+            this.groupBox8.Controls.Add(this.label18);
+            this.groupBox8.Controls.Add(this.label16);
+            this.groupBox8.Location = new System.Drawing.Point(440, 20);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(363, 100);
+            this.groupBox8.TabIndex = 3;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Cylinder Volume Cap End";
+            // 
+            // determineVolumeRodEndButton
+            // 
+            this.determineVolumeRodEndButton.Location = new System.Drawing.Point(235, 22);
+            this.determineVolumeRodEndButton.Name = "determineVolumeRodEndButton";
+            this.determineVolumeRodEndButton.Size = new System.Drawing.Size(82, 39);
+            this.determineVolumeRodEndButton.TabIndex = 5;
+            this.determineVolumeRodEndButton.Text = "Determine Volume";
+            this.determineVolumeRodEndButton.UseVisualStyleBackColor = true;
+            this.determineVolumeRodEndButton.Click += new System.EventHandler(this.determineVolumeRodEndButton_Click);
+            // 
+            // enterPistonAreaVolumeTextBox
+            // 
+            this.enterPistonAreaVolumeTextBox.Location = new System.Drawing.Point(120, 45);
+            this.enterPistonAreaVolumeTextBox.Name = "enterPistonAreaVolumeTextBox";
+            this.enterPistonAreaVolumeTextBox.Size = new System.Drawing.Size(87, 20);
+            this.enterPistonAreaVolumeTextBox.TabIndex = 4;
+            // 
+            // cylinderStrokeTextBox
+            // 
+            this.cylinderStrokeTextBox.Location = new System.Drawing.Point(120, 19);
+            this.cylinderStrokeTextBox.Name = "cylinderStrokeTextBox";
+            this.cylinderStrokeTextBox.Size = new System.Drawing.Size(87, 20);
+            this.cylinderStrokeTextBox.TabIndex = 3;
+            // 
+            // cylinderVolumeCapEndAnswerLabel
+            // 
+            this.cylinderVolumeCapEndAnswerLabel.AutoSize = true;
+            this.cylinderVolumeCapEndAnswerLabel.Location = new System.Drawing.Point(6, 76);
+            this.cylinderVolumeCapEndAnswerLabel.Name = "cylinderVolumeCapEndAnswerLabel";
+            this.cylinderVolumeCapEndAnswerLabel.Size = new System.Drawing.Size(10, 13);
+            this.cylinderVolumeCapEndAnswerLabel.TabIndex = 2;
+            this.cylinderVolumeCapEndAnswerLabel.Text = "-";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 39);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(64, 26);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "Enter Piston\r\nArea (in^2)";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 22);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(106, 13);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Enter Cyl. Stroke (in.)";
             // 
             // groupBox7
             // 
@@ -742,6 +819,28 @@
             this.groupBox7.TabIndex = 2;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Cylinder Speed Rod End";
+            // 
+            // areaCalcRodLabel
+            // 
+            this.areaCalcRodLabel.AutoSize = true;
+            this.areaCalcRodLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.areaCalcRodLabel.Location = new System.Drawing.Point(213, 74);
+            this.areaCalcRodLabel.Name = "areaCalcRodLabel";
+            this.areaCalcRodLabel.Size = new System.Drawing.Size(13, 13);
+            this.areaCalcRodLabel.TabIndex = 10;
+            this.areaCalcRodLabel.Text = "?";
+            this.areaCalcRodLabel.Click += new System.EventHandler(this.areaCalcRodLabel_Click);
+            // 
+            // areaCalcPistonAreaLabel
+            // 
+            this.areaCalcPistonAreaLabel.AutoSize = true;
+            this.areaCalcPistonAreaLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.areaCalcPistonAreaLabel.Location = new System.Drawing.Point(213, 48);
+            this.areaCalcPistonAreaLabel.Name = "areaCalcPistonAreaLabel";
+            this.areaCalcPistonAreaLabel.Size = new System.Drawing.Size(13, 13);
+            this.areaCalcPistonAreaLabel.TabIndex = 9;
+            this.areaCalcPistonAreaLabel.Text = "?";
+            this.areaCalcPistonAreaLabel.Click += new System.EventHandler(this.areaCalcPistonAreaLabel_Click);
             // 
             // rodAreaTextBox
             // 
@@ -954,27 +1053,16 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Enter Cylinder DIA (in.)";
             // 
-            // areaCalcPistonAreaLabel
+            // capEndVolumeAreaLabel
             // 
-            this.areaCalcPistonAreaLabel.AutoSize = true;
-            this.areaCalcPistonAreaLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.areaCalcPistonAreaLabel.Location = new System.Drawing.Point(213, 48);
-            this.areaCalcPistonAreaLabel.Name = "areaCalcPistonAreaLabel";
-            this.areaCalcPistonAreaLabel.Size = new System.Drawing.Size(13, 13);
-            this.areaCalcPistonAreaLabel.TabIndex = 9;
-            this.areaCalcPistonAreaLabel.Text = "?";
-            this.areaCalcPistonAreaLabel.Click += new System.EventHandler(this.areaCalcPistonAreaLabel_Click);
-            // 
-            // areaCalcRodLabel
-            // 
-            this.areaCalcRodLabel.AutoSize = true;
-            this.areaCalcRodLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.areaCalcRodLabel.Location = new System.Drawing.Point(213, 74);
-            this.areaCalcRodLabel.Name = "areaCalcRodLabel";
-            this.areaCalcRodLabel.Size = new System.Drawing.Size(13, 13);
-            this.areaCalcRodLabel.TabIndex = 10;
-            this.areaCalcRodLabel.Text = "?";
-            this.areaCalcRodLabel.Click += new System.EventHandler(this.areaCalcRodLabel_Click);
+            this.capEndVolumeAreaLabel.AutoSize = true;
+            this.capEndVolumeAreaLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.capEndVolumeAreaLabel.Location = new System.Drawing.Point(213, 48);
+            this.capEndVolumeAreaLabel.Name = "capEndVolumeAreaLabel";
+            this.capEndVolumeAreaLabel.Size = new System.Drawing.Size(13, 13);
+            this.capEndVolumeAreaLabel.TabIndex = 6;
+            this.capEndVolumeAreaLabel.Text = "?";
+            this.capEndVolumeAreaLabel.Click += new System.EventHandler(this.capEndVolumeAreaLabel_Click);
             // 
             // Form1
             // 
@@ -995,8 +1083,8 @@
             this.horsepowerGroupBox.ResumeLayout(false);
             this.horsepowerGroupBox.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.heatInFreshWater.ResumeLayout(false);
+            this.heatInFreshWater.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1004,6 +1092,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -1067,7 +1157,7 @@
         private System.Windows.Forms.Label BTUToHorsepowerAnswerLabel;
         private System.Windows.Forms.Label enterBTULabel;
         private System.Windows.Forms.Button DetermiineHorsepowerFromBTUButton;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox heatInFreshWater;
         private System.Windows.Forms.Button DetermineHeatInWaterBUtton;
         private System.Windows.Forms.TextBox flowrateHeatInWaterTextBox;
         private System.Windows.Forms.TextBox tempDiffWaterTextBox;
@@ -1101,6 +1191,14 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label areaCalcRodLabel;
         private System.Windows.Forms.Label areaCalcPistonAreaLabel;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Button determineVolumeRodEndButton;
+        private System.Windows.Forms.TextBox enterPistonAreaVolumeTextBox;
+        private System.Windows.Forms.TextBox cylinderStrokeTextBox;
+        private System.Windows.Forms.Label cylinderVolumeCapEndAnswerLabel;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label capEndVolumeAreaLabel;
     }
 }
 
