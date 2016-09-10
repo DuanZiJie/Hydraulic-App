@@ -89,7 +89,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.determineVolumeRodEndButton = new System.Windows.Forms.Button();
+            this.capEndVolumeAreaLabel = new System.Windows.Forms.Label();
+            this.determineVolumeCapEndButton = new System.Windows.Forms.Button();
             this.enterPistonAreaVolumeTextBox = new System.Windows.Forms.TextBox();
             this.cylinderStrokeTextBox = new System.Windows.Forms.TextBox();
             this.cylinderVolumeCapEndAnswerLabel = new System.Windows.Forms.Label();
@@ -121,7 +122,17 @@
             this.areaOfRodEndAnswerLabel = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.capEndVolumeAreaLabel = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cylinderStrokeRodEndTextBox = new System.Windows.Forms.TextBox();
+            this.pistonAreaRodEndTextBox = new System.Windows.Forms.TextBox();
+            this.determineVolumeRodEndButton = new System.Windows.Forms.Button();
+            this.cylinderVolumeRodEndAnswerLabel = new System.Windows.Forms.Label();
+            this.rodAreaVolumeTextBox = new System.Windows.Forms.TextBox();
+            this.rodEndRodVolumeAreaLabel = new System.Windows.Forms.Label();
+            this.rodEndCapVolumeAreaLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.flowRateGroupBox.SuspendLayout();
@@ -138,6 +149,7 @@
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // determineHorsePowerbutton
@@ -722,6 +734,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox4);
             this.tabPage3.Controls.Add(this.groupBox8);
             this.tabPage3.Controls.Add(this.groupBox7);
             this.tabPage3.Controls.Add(this.groupBox6);
@@ -737,7 +750,7 @@
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.capEndVolumeAreaLabel);
-            this.groupBox8.Controls.Add(this.determineVolumeRodEndButton);
+            this.groupBox8.Controls.Add(this.determineVolumeCapEndButton);
             this.groupBox8.Controls.Add(this.enterPistonAreaVolumeTextBox);
             this.groupBox8.Controls.Add(this.cylinderStrokeTextBox);
             this.groupBox8.Controls.Add(this.cylinderVolumeCapEndAnswerLabel);
@@ -750,15 +763,26 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Cylinder Volume Cap End";
             // 
-            // determineVolumeRodEndButton
+            // capEndVolumeAreaLabel
             // 
-            this.determineVolumeRodEndButton.Location = new System.Drawing.Point(235, 22);
-            this.determineVolumeRodEndButton.Name = "determineVolumeRodEndButton";
-            this.determineVolumeRodEndButton.Size = new System.Drawing.Size(82, 39);
-            this.determineVolumeRodEndButton.TabIndex = 5;
-            this.determineVolumeRodEndButton.Text = "Determine Volume";
-            this.determineVolumeRodEndButton.UseVisualStyleBackColor = true;
-            this.determineVolumeRodEndButton.Click += new System.EventHandler(this.determineVolumeRodEndButton_Click);
+            this.capEndVolumeAreaLabel.AutoSize = true;
+            this.capEndVolumeAreaLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.capEndVolumeAreaLabel.Location = new System.Drawing.Point(213, 48);
+            this.capEndVolumeAreaLabel.Name = "capEndVolumeAreaLabel";
+            this.capEndVolumeAreaLabel.Size = new System.Drawing.Size(13, 13);
+            this.capEndVolumeAreaLabel.TabIndex = 6;
+            this.capEndVolumeAreaLabel.Text = "?";
+            this.capEndVolumeAreaLabel.Click += new System.EventHandler(this.capEndVolumeAreaLabel_Click);
+            // 
+            // determineVolumeCapEndButton
+            // 
+            this.determineVolumeCapEndButton.Location = new System.Drawing.Point(235, 22);
+            this.determineVolumeCapEndButton.Name = "determineVolumeCapEndButton";
+            this.determineVolumeCapEndButton.Size = new System.Drawing.Size(82, 39);
+            this.determineVolumeCapEndButton.TabIndex = 5;
+            this.determineVolumeCapEndButton.Text = "Determine Volume";
+            this.determineVolumeCapEndButton.UseVisualStyleBackColor = true;
+            this.determineVolumeCapEndButton.Click += new System.EventHandler(this.determineVolumeRodEndButton_Click);
             // 
             // enterPistonAreaVolumeTextBox
             // 
@@ -1053,16 +1077,113 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Enter Cylinder DIA (in.)";
             // 
-            // capEndVolumeAreaLabel
+            // groupBox4
             // 
-            this.capEndVolumeAreaLabel.AutoSize = true;
-            this.capEndVolumeAreaLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.capEndVolumeAreaLabel.Location = new System.Drawing.Point(213, 48);
-            this.capEndVolumeAreaLabel.Name = "capEndVolumeAreaLabel";
-            this.capEndVolumeAreaLabel.Size = new System.Drawing.Size(13, 13);
-            this.capEndVolumeAreaLabel.TabIndex = 6;
-            this.capEndVolumeAreaLabel.Text = "?";
-            this.capEndVolumeAreaLabel.Click += new System.EventHandler(this.capEndVolumeAreaLabel_Click);
+            this.groupBox4.Controls.Add(this.rodEndCapVolumeAreaLabel);
+            this.groupBox4.Controls.Add(this.rodEndRodVolumeAreaLabel);
+            this.groupBox4.Controls.Add(this.rodAreaVolumeTextBox);
+            this.groupBox4.Controls.Add(this.cylinderVolumeRodEndAnswerLabel);
+            this.groupBox4.Controls.Add(this.determineVolumeRodEndButton);
+            this.groupBox4.Controls.Add(this.pistonAreaRodEndTextBox);
+            this.groupBox4.Controls.Add(this.cylinderStrokeRodEndTextBox);
+            this.groupBox4.Controls.Add(this.label21);
+            this.groupBox4.Controls.Add(this.label20);
+            this.groupBox4.Controls.Add(this.label19);
+            this.groupBox4.Location = new System.Drawing.Point(440, 140);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(363, 126);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Cylinder Volume Rod End";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(6, 22);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(106, 13);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Enter Cyl. Stroke (in.)";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 39);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(64, 26);
+            this.label20.TabIndex = 1;
+            this.label20.Text = "Enter Piston\r\nArea (in^2)";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 70);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(58, 26);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "Enter Rod\r\nArea (in^2)";
+            // 
+            // cylinderStrokeRodEndTextBox
+            // 
+            this.cylinderStrokeRodEndTextBox.Location = new System.Drawing.Point(120, 19);
+            this.cylinderStrokeRodEndTextBox.Name = "cylinderStrokeRodEndTextBox";
+            this.cylinderStrokeRodEndTextBox.Size = new System.Drawing.Size(87, 20);
+            this.cylinderStrokeRodEndTextBox.TabIndex = 3;
+            // 
+            // pistonAreaRodEndTextBox
+            // 
+            this.pistonAreaRodEndTextBox.Location = new System.Drawing.Point(120, 45);
+            this.pistonAreaRodEndTextBox.Name = "pistonAreaRodEndTextBox";
+            this.pistonAreaRodEndTextBox.Size = new System.Drawing.Size(87, 20);
+            this.pistonAreaRodEndTextBox.TabIndex = 4;
+            // 
+            // determineVolumeRodEndButton
+            // 
+            this.determineVolumeRodEndButton.Location = new System.Drawing.Point(235, 22);
+            this.determineVolumeRodEndButton.Name = "determineVolumeRodEndButton";
+            this.determineVolumeRodEndButton.Size = new System.Drawing.Size(82, 39);
+            this.determineVolumeRodEndButton.TabIndex = 5;
+            this.determineVolumeRodEndButton.Text = "Determine Volume";
+            this.determineVolumeRodEndButton.UseVisualStyleBackColor = true;
+            this.determineVolumeRodEndButton.Click += new System.EventHandler(this.determineVolumeRodEndButton_Click_1);
+            // 
+            // cylinderVolumeRodEndAnswerLabel
+            // 
+            this.cylinderVolumeRodEndAnswerLabel.AutoSize = true;
+            this.cylinderVolumeRodEndAnswerLabel.Location = new System.Drawing.Point(6, 100);
+            this.cylinderVolumeRodEndAnswerLabel.Name = "cylinderVolumeRodEndAnswerLabel";
+            this.cylinderVolumeRodEndAnswerLabel.Size = new System.Drawing.Size(10, 13);
+            this.cylinderVolumeRodEndAnswerLabel.TabIndex = 6;
+            this.cylinderVolumeRodEndAnswerLabel.Text = "-";
+            // 
+            // rodAreaVolumeTextBox
+            // 
+            this.rodAreaVolumeTextBox.Location = new System.Drawing.Point(120, 71);
+            this.rodAreaVolumeTextBox.Name = "rodAreaVolumeTextBox";
+            this.rodAreaVolumeTextBox.Size = new System.Drawing.Size(87, 20);
+            this.rodAreaVolumeTextBox.TabIndex = 7;
+            // 
+            // rodEndRodVolumeAreaLabel
+            // 
+            this.rodEndRodVolumeAreaLabel.AutoSize = true;
+            this.rodEndRodVolumeAreaLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.rodEndRodVolumeAreaLabel.Location = new System.Drawing.Point(213, 76);
+            this.rodEndRodVolumeAreaLabel.Name = "rodEndRodVolumeAreaLabel";
+            this.rodEndRodVolumeAreaLabel.Size = new System.Drawing.Size(13, 13);
+            this.rodEndRodVolumeAreaLabel.TabIndex = 8;
+            this.rodEndRodVolumeAreaLabel.Text = "?";
+            this.rodEndRodVolumeAreaLabel.Click += new System.EventHandler(this.rodEndRodVolumeAreaLabel_Click);
+            // 
+            // rodEndCapVolumeAreaLabel
+            // 
+            this.rodEndCapVolumeAreaLabel.AutoSize = true;
+            this.rodEndCapVolumeAreaLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.rodEndCapVolumeAreaLabel.Location = new System.Drawing.Point(213, 48);
+            this.rodEndCapVolumeAreaLabel.Name = "rodEndCapVolumeAreaLabel";
+            this.rodEndCapVolumeAreaLabel.Size = new System.Drawing.Size(13, 13);
+            this.rodEndCapVolumeAreaLabel.TabIndex = 9;
+            this.rodEndCapVolumeAreaLabel.Text = "?";
+            this.rodEndCapVolumeAreaLabel.Click += new System.EventHandler(this.rodEndCapVolumeAreaLabel_Click);
             // 
             // Form1
             // 
@@ -1100,6 +1221,8 @@
             this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1192,13 +1315,24 @@
         private System.Windows.Forms.Label areaCalcRodLabel;
         private System.Windows.Forms.Label areaCalcPistonAreaLabel;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Button determineVolumeRodEndButton;
+        private System.Windows.Forms.Button determineVolumeCapEndButton;
         private System.Windows.Forms.TextBox enterPistonAreaVolumeTextBox;
         private System.Windows.Forms.TextBox cylinderStrokeTextBox;
         private System.Windows.Forms.Label cylinderVolumeCapEndAnswerLabel;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label capEndVolumeAreaLabel;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button determineVolumeRodEndButton;
+        private System.Windows.Forms.TextBox pistonAreaRodEndTextBox;
+        private System.Windows.Forms.TextBox cylinderStrokeRodEndTextBox;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox rodAreaVolumeTextBox;
+        private System.Windows.Forms.Label cylinderVolumeRodEndAnswerLabel;
+        private System.Windows.Forms.Label rodEndCapVolumeAreaLabel;
+        private System.Windows.Forms.Label rodEndRodVolumeAreaLabel;
     }
 }
 

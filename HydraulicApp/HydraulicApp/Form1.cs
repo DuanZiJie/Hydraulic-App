@@ -36,6 +36,7 @@ namespace HydraulicApp
             cylSpeedAnswerLabel.Text = CylinderSpeedAnswerText;
             cylSpeedRodEndAnswerLabel.Text = CylinderSpeedAnswerText;
             cylinderVolumeCapEndAnswerLabel.Text = VolumeLabelText;
+            cylinderVolumeRodEndAnswerLabel.Text = VolumeLabelText;
         }
 
         private void determineHorsepowerButton_Click(object sender, EventArgs e)
@@ -121,6 +122,20 @@ namespace HydraulicApp
             enterPistonAreaVolumeTextBox.Text = temp.NewArea.ToString("F2");
             temp.Dispose();
         }
+        private void rodEndCapVolumeAreaLabel_Click(object sender, EventArgs e)
+        {
+            AreaForm temp = new AreaForm();
+            temp.ShowDialog(this);
+            pistonAreaRodEndTextBox.Text = temp.NewArea.ToString("F2");
+            temp.Dispose();
+        }
+        private void rodEndRodVolumeAreaLabel_Click(object sender, EventArgs e)
+        {
+            AreaForm temp = new AreaForm();
+            temp.ShowDialog(this);
+            rodAreaVolumeTextBox.Text = temp.NewArea.ToString("F2");
+            temp.Dispose();
+        }
 
         private void determineHeatByPressureButton_Click(object sender, EventArgs e)
         {
@@ -194,8 +209,18 @@ namespace HydraulicApp
             double Area;
 
             if (Double.TryParse(cylinderStrokeTextBox.Text, out Stroke) && Double.TryParse(enterPistonAreaVolumeTextBox.Text, out Area))
-                cylinderVolumeCapEndAnswerLabel.Text = VolumeLabelText + Cylinder.CyilnderVolume(Stroke, Area).ToString("F2") + " Gallons";
+                cylinderVolumeCapEndAnswerLabel.Text = VolumeLabelText + Cylinder.CylinderVolume(Stroke, Area).ToString("F2") + " Gallons";
 
+        }
+
+        private void determineVolumeRodEndButton_Click_1(object sender, EventArgs e)
+        {
+            double Stroke;
+            double PistonArea;
+            double RodArea;
+
+            if (Double.TryParse(cylinderStrokeRodEndTextBox.Text, out Stroke) && Double.TryParse(pistonAreaRodEndTextBox.Text, out PistonArea) && Double.TryParse(rodAreaVolumeTextBox.Text, out RodArea))
+                cylinderVolumeRodEndAnswerLabel.Text = VolumeLabelText + Cylinder.CylinderVolumeRodEnd(Stroke, PistonArea, RodArea).ToString("F2") + " Gallons";
         }
     }
 }
