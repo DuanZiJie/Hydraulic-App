@@ -133,6 +133,14 @@
             this.rodAreaVolumeTextBox = new System.Windows.Forms.TextBox();
             this.rodEndRodVolumeAreaLabel = new System.Windows.Forms.Label();
             this.rodEndCapVolumeAreaLabel = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.cylinderFlowRateAnswerLabel = new System.Windows.Forms.Label();
+            this.cylVelocityTextBox = new System.Windows.Forms.TextBox();
+            this.cylAreaFlowrateTextBox = new System.Windows.Forms.TextBox();
+            this.determineCylFlowrateButton = new System.Windows.Forms.Button();
+            this.cylFlowrateAreaCalcLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.flowRateGroupBox.SuspendLayout();
@@ -150,6 +158,7 @@
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // determineHorsePowerbutton
@@ -734,6 +743,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox9);
             this.tabPage3.Controls.Add(this.groupBox4);
             this.tabPage3.Controls.Add(this.groupBox8);
             this.tabPage3.Controls.Add(this.groupBox7);
@@ -756,7 +766,7 @@
             this.groupBox8.Controls.Add(this.cylinderVolumeCapEndAnswerLabel);
             this.groupBox8.Controls.Add(this.label18);
             this.groupBox8.Controls.Add(this.label16);
-            this.groupBox8.Location = new System.Drawing.Point(440, 20);
+            this.groupBox8.Location = new System.Drawing.Point(440, 140);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(363, 100);
             this.groupBox8.TabIndex = 3;
@@ -1089,7 +1099,7 @@
             this.groupBox4.Controls.Add(this.label21);
             this.groupBox4.Controls.Add(this.label20);
             this.groupBox4.Controls.Add(this.label19);
-            this.groupBox4.Location = new System.Drawing.Point(440, 140);
+            this.groupBox4.Location = new System.Drawing.Point(440, 260);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(363, 126);
             this.groupBox4.TabIndex = 4;
@@ -1185,6 +1195,84 @@
             this.rodEndCapVolumeAreaLabel.Text = "?";
             this.rodEndCapVolumeAreaLabel.Click += new System.EventHandler(this.rodEndCapVolumeAreaLabel_Click);
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.cylFlowrateAreaCalcLabel);
+            this.groupBox9.Controls.Add(this.determineCylFlowrateButton);
+            this.groupBox9.Controls.Add(this.cylAreaFlowrateTextBox);
+            this.groupBox9.Controls.Add(this.cylVelocityTextBox);
+            this.groupBox9.Controls.Add(this.cylinderFlowRateAnswerLabel);
+            this.groupBox9.Controls.Add(this.label23);
+            this.groupBox9.Controls.Add(this.label22);
+            this.groupBox9.Location = new System.Drawing.Point(440, 20);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(363, 100);
+            this.groupBox9.TabIndex = 5;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Cylinder Flowrate";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 16);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(72, 26);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Enter Cylinder\r\nVelcity (in/s)";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 48);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(106, 13);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "Enter Cyl. Area (in^2)";
+            // 
+            // cylinderFlowRateAnswerLabel
+            // 
+            this.cylinderFlowRateAnswerLabel.AutoSize = true;
+            this.cylinderFlowRateAnswerLabel.Location = new System.Drawing.Point(6, 76);
+            this.cylinderFlowRateAnswerLabel.Name = "cylinderFlowRateAnswerLabel";
+            this.cylinderFlowRateAnswerLabel.Size = new System.Drawing.Size(10, 13);
+            this.cylinderFlowRateAnswerLabel.TabIndex = 2;
+            this.cylinderFlowRateAnswerLabel.Text = "-";
+            // 
+            // cylVelocityTextBox
+            // 
+            this.cylVelocityTextBox.Location = new System.Drawing.Point(120, 19);
+            this.cylVelocityTextBox.Name = "cylVelocityTextBox";
+            this.cylVelocityTextBox.Size = new System.Drawing.Size(87, 20);
+            this.cylVelocityTextBox.TabIndex = 3;
+            // 
+            // cylAreaFlowrateTextBox
+            // 
+            this.cylAreaFlowrateTextBox.Location = new System.Drawing.Point(120, 45);
+            this.cylAreaFlowrateTextBox.Name = "cylAreaFlowrateTextBox";
+            this.cylAreaFlowrateTextBox.Size = new System.Drawing.Size(87, 20);
+            this.cylAreaFlowrateTextBox.TabIndex = 4;
+            // 
+            // determineCylFlowrateButton
+            // 
+            this.determineCylFlowrateButton.Location = new System.Drawing.Point(235, 22);
+            this.determineCylFlowrateButton.Name = "determineCylFlowrateButton";
+            this.determineCylFlowrateButton.Size = new System.Drawing.Size(82, 39);
+            this.determineCylFlowrateButton.TabIndex = 5;
+            this.determineCylFlowrateButton.Text = "Determine Flow";
+            this.determineCylFlowrateButton.UseVisualStyleBackColor = true;
+            this.determineCylFlowrateButton.Click += new System.EventHandler(this.determineCylFlowrateButton_Click);
+            // 
+            // cylFlowrateAreaCalcLabel
+            // 
+            this.cylFlowrateAreaCalcLabel.AutoSize = true;
+            this.cylFlowrateAreaCalcLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.cylFlowrateAreaCalcLabel.Location = new System.Drawing.Point(213, 48);
+            this.cylFlowrateAreaCalcLabel.Name = "cylFlowrateAreaCalcLabel";
+            this.cylFlowrateAreaCalcLabel.Size = new System.Drawing.Size(13, 13);
+            this.cylFlowrateAreaCalcLabel.TabIndex = 6;
+            this.cylFlowrateAreaCalcLabel.Text = "?";
+            this.cylFlowrateAreaCalcLabel.Click += new System.EventHandler(this.cylFlowrateAreaCalcLabel_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1223,6 +1311,8 @@
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1333,6 +1423,14 @@
         private System.Windows.Forms.Label cylinderVolumeRodEndAnswerLabel;
         private System.Windows.Forms.Label rodEndCapVolumeAreaLabel;
         private System.Windows.Forms.Label rodEndRodVolumeAreaLabel;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Button determineCylFlowrateButton;
+        private System.Windows.Forms.TextBox cylAreaFlowrateTextBox;
+        private System.Windows.Forms.TextBox cylVelocityTextBox;
+        private System.Windows.Forms.Label cylinderFlowRateAnswerLabel;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label cylFlowrateAreaCalcLabel;
     }
 }
 

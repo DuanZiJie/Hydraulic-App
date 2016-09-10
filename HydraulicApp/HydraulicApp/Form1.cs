@@ -37,6 +37,7 @@ namespace HydraulicApp
             cylSpeedRodEndAnswerLabel.Text = CylinderSpeedAnswerText;
             cylinderVolumeCapEndAnswerLabel.Text = VolumeLabelText;
             cylinderVolumeRodEndAnswerLabel.Text = VolumeLabelText;
+            cylinderFlowRateAnswerLabel.Text = FlowrateLabelText;
         }
 
         private void determineHorsepowerButton_Click(object sender, EventArgs e)
@@ -136,6 +137,13 @@ namespace HydraulicApp
             rodAreaVolumeTextBox.Text = temp.NewArea.ToString("F2");
             temp.Dispose();
         }
+        private void cylFlowrateAreaCalcLabel_Click(object sender, EventArgs e)
+        {
+            AreaForm temp = new AreaForm();
+            temp.ShowDialog(this);
+            cylAreaFlowrateTextBox.Text = temp.NewArea.ToString("F2");
+            temp.Dispose();
+        }
 
         private void determineHeatByPressureButton_Click(object sender, EventArgs e)
         {
@@ -221,6 +229,15 @@ namespace HydraulicApp
 
             if (Double.TryParse(cylinderStrokeRodEndTextBox.Text, out Stroke) && Double.TryParse(pistonAreaRodEndTextBox.Text, out PistonArea) && Double.TryParse(rodAreaVolumeTextBox.Text, out RodArea))
                 cylinderVolumeRodEndAnswerLabel.Text = VolumeLabelText + Cylinder.CylinderVolumeRodEnd(Stroke, PistonArea, RodArea).ToString("F2") + " Gallons";
+        }
+
+        private void determineCylFlowrateButton_Click(object sender, EventArgs e)
+        {
+            double Velocity;
+            double Area;
+
+            if (Double.TryParse(cylVelocityTextBox.Text, out Velocity) && Double.TryParse(cylAreaFlowrateTextBox.Text, out Area))
+                cylinderFlowRateAnswerLabel.Text = FlowrateLabelText + Cylinder.CylinderFlowRate(Velocity, Area).ToString("F2") + " GPM";
         }
     }
 }

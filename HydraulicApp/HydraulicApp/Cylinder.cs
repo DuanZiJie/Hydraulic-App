@@ -45,7 +45,7 @@ namespace HydraulicApp
 
         public static double CylinderFlowRate(double velocity, double area)
         {
-            return (12 * 60 * velocity * area) / 231;
+            return (60 * velocity * area) / 231;
         }
     }
 }
