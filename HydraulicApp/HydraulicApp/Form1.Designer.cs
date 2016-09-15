@@ -88,6 +88,25 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.cylFlowrateAreaCalcLabel = new System.Windows.Forms.Label();
+            this.determineCylFlowrateButton = new System.Windows.Forms.Button();
+            this.cylAreaFlowrateTextBox = new System.Windows.Forms.TextBox();
+            this.cylVelocityTextBox = new System.Windows.Forms.TextBox();
+            this.cylinderFlowRateAnswerLabel = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.rodEndCapVolumeAreaLabel = new System.Windows.Forms.Label();
+            this.rodEndRodVolumeAreaLabel = new System.Windows.Forms.Label();
+            this.rodAreaVolumeTextBox = new System.Windows.Forms.TextBox();
+            this.cylinderVolumeRodEndAnswerLabel = new System.Windows.Forms.Label();
+            this.determineVolumeRodEndButton = new System.Windows.Forms.Button();
+            this.pistonAreaRodEndTextBox = new System.Windows.Forms.TextBox();
+            this.cylinderStrokeRodEndTextBox = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.capEndVolumeAreaLabel = new System.Windows.Forms.Label();
             this.determineVolumeCapEndButton = new System.Windows.Forms.Button();
@@ -122,25 +141,8 @@
             this.areaOfRodEndAnswerLabel = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.cylinderStrokeRodEndTextBox = new System.Windows.Forms.TextBox();
-            this.pistonAreaRodEndTextBox = new System.Windows.Forms.TextBox();
-            this.determineVolumeRodEndButton = new System.Windows.Forms.Button();
-            this.cylinderVolumeRodEndAnswerLabel = new System.Windows.Forms.Label();
-            this.rodAreaVolumeTextBox = new System.Windows.Forms.TextBox();
-            this.rodEndRodVolumeAreaLabel = new System.Windows.Forms.Label();
-            this.rodEndCapVolumeAreaLabel = new System.Windows.Forms.Label();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.cylinderFlowRateAnswerLabel = new System.Windows.Forms.Label();
-            this.cylVelocityTextBox = new System.Windows.Forms.TextBox();
-            this.cylAreaFlowrateTextBox = new System.Windows.Forms.TextBox();
-            this.determineCylFlowrateButton = new System.Windows.Forms.Button();
-            this.cylFlowrateAreaCalcLabel = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.flowRateGroupBox.SuspendLayout();
@@ -153,12 +155,13 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox9.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // determineHorsePowerbutton
@@ -189,6 +192,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -757,6 +761,192 @@
             this.tabPage3.Text = "Cylinder";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.cylFlowrateAreaCalcLabel);
+            this.groupBox9.Controls.Add(this.determineCylFlowrateButton);
+            this.groupBox9.Controls.Add(this.cylAreaFlowrateTextBox);
+            this.groupBox9.Controls.Add(this.cylVelocityTextBox);
+            this.groupBox9.Controls.Add(this.cylinderFlowRateAnswerLabel);
+            this.groupBox9.Controls.Add(this.label23);
+            this.groupBox9.Controls.Add(this.label22);
+            this.groupBox9.Location = new System.Drawing.Point(440, 20);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(363, 100);
+            this.groupBox9.TabIndex = 5;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Cylinder Flowrate";
+            // 
+            // cylFlowrateAreaCalcLabel
+            // 
+            this.cylFlowrateAreaCalcLabel.AutoSize = true;
+            this.cylFlowrateAreaCalcLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.cylFlowrateAreaCalcLabel.Location = new System.Drawing.Point(213, 48);
+            this.cylFlowrateAreaCalcLabel.Name = "cylFlowrateAreaCalcLabel";
+            this.cylFlowrateAreaCalcLabel.Size = new System.Drawing.Size(13, 13);
+            this.cylFlowrateAreaCalcLabel.TabIndex = 6;
+            this.cylFlowrateAreaCalcLabel.Text = "?";
+            this.cylFlowrateAreaCalcLabel.Click += new System.EventHandler(this.cylFlowrateAreaCalcLabel_Click);
+            // 
+            // determineCylFlowrateButton
+            // 
+            this.determineCylFlowrateButton.Location = new System.Drawing.Point(235, 22);
+            this.determineCylFlowrateButton.Name = "determineCylFlowrateButton";
+            this.determineCylFlowrateButton.Size = new System.Drawing.Size(82, 39);
+            this.determineCylFlowrateButton.TabIndex = 5;
+            this.determineCylFlowrateButton.Text = "Determine Flow";
+            this.determineCylFlowrateButton.UseVisualStyleBackColor = true;
+            this.determineCylFlowrateButton.Click += new System.EventHandler(this.determineCylFlowrateButton_Click);
+            // 
+            // cylAreaFlowrateTextBox
+            // 
+            this.cylAreaFlowrateTextBox.Location = new System.Drawing.Point(120, 45);
+            this.cylAreaFlowrateTextBox.Name = "cylAreaFlowrateTextBox";
+            this.cylAreaFlowrateTextBox.Size = new System.Drawing.Size(87, 20);
+            this.cylAreaFlowrateTextBox.TabIndex = 4;
+            // 
+            // cylVelocityTextBox
+            // 
+            this.cylVelocityTextBox.Location = new System.Drawing.Point(120, 19);
+            this.cylVelocityTextBox.Name = "cylVelocityTextBox";
+            this.cylVelocityTextBox.Size = new System.Drawing.Size(87, 20);
+            this.cylVelocityTextBox.TabIndex = 3;
+            // 
+            // cylinderFlowRateAnswerLabel
+            // 
+            this.cylinderFlowRateAnswerLabel.AutoSize = true;
+            this.cylinderFlowRateAnswerLabel.Location = new System.Drawing.Point(6, 76);
+            this.cylinderFlowRateAnswerLabel.Name = "cylinderFlowRateAnswerLabel";
+            this.cylinderFlowRateAnswerLabel.Size = new System.Drawing.Size(10, 13);
+            this.cylinderFlowRateAnswerLabel.TabIndex = 2;
+            this.cylinderFlowRateAnswerLabel.Text = "-";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 48);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(106, 13);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "Enter Cyl. Area (in^2)";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 16);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(72, 26);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Enter Cylinder\r\nVelcity (in/s)";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.rodEndCapVolumeAreaLabel);
+            this.groupBox4.Controls.Add(this.rodEndRodVolumeAreaLabel);
+            this.groupBox4.Controls.Add(this.rodAreaVolumeTextBox);
+            this.groupBox4.Controls.Add(this.cylinderVolumeRodEndAnswerLabel);
+            this.groupBox4.Controls.Add(this.determineVolumeRodEndButton);
+            this.groupBox4.Controls.Add(this.pistonAreaRodEndTextBox);
+            this.groupBox4.Controls.Add(this.cylinderStrokeRodEndTextBox);
+            this.groupBox4.Controls.Add(this.label21);
+            this.groupBox4.Controls.Add(this.label20);
+            this.groupBox4.Controls.Add(this.label19);
+            this.groupBox4.Location = new System.Drawing.Point(440, 260);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(363, 126);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Cylinder Volume Rod End";
+            // 
+            // rodEndCapVolumeAreaLabel
+            // 
+            this.rodEndCapVolumeAreaLabel.AutoSize = true;
+            this.rodEndCapVolumeAreaLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.rodEndCapVolumeAreaLabel.Location = new System.Drawing.Point(213, 48);
+            this.rodEndCapVolumeAreaLabel.Name = "rodEndCapVolumeAreaLabel";
+            this.rodEndCapVolumeAreaLabel.Size = new System.Drawing.Size(13, 13);
+            this.rodEndCapVolumeAreaLabel.TabIndex = 9;
+            this.rodEndCapVolumeAreaLabel.Text = "?";
+            this.rodEndCapVolumeAreaLabel.Click += new System.EventHandler(this.rodEndCapVolumeAreaLabel_Click);
+            // 
+            // rodEndRodVolumeAreaLabel
+            // 
+            this.rodEndRodVolumeAreaLabel.AutoSize = true;
+            this.rodEndRodVolumeAreaLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.rodEndRodVolumeAreaLabel.Location = new System.Drawing.Point(213, 76);
+            this.rodEndRodVolumeAreaLabel.Name = "rodEndRodVolumeAreaLabel";
+            this.rodEndRodVolumeAreaLabel.Size = new System.Drawing.Size(13, 13);
+            this.rodEndRodVolumeAreaLabel.TabIndex = 8;
+            this.rodEndRodVolumeAreaLabel.Text = "?";
+            this.rodEndRodVolumeAreaLabel.Click += new System.EventHandler(this.rodEndRodVolumeAreaLabel_Click);
+            // 
+            // rodAreaVolumeTextBox
+            // 
+            this.rodAreaVolumeTextBox.Location = new System.Drawing.Point(120, 71);
+            this.rodAreaVolumeTextBox.Name = "rodAreaVolumeTextBox";
+            this.rodAreaVolumeTextBox.Size = new System.Drawing.Size(87, 20);
+            this.rodAreaVolumeTextBox.TabIndex = 7;
+            // 
+            // cylinderVolumeRodEndAnswerLabel
+            // 
+            this.cylinderVolumeRodEndAnswerLabel.AutoSize = true;
+            this.cylinderVolumeRodEndAnswerLabel.Location = new System.Drawing.Point(6, 100);
+            this.cylinderVolumeRodEndAnswerLabel.Name = "cylinderVolumeRodEndAnswerLabel";
+            this.cylinderVolumeRodEndAnswerLabel.Size = new System.Drawing.Size(10, 13);
+            this.cylinderVolumeRodEndAnswerLabel.TabIndex = 6;
+            this.cylinderVolumeRodEndAnswerLabel.Text = "-";
+            // 
+            // determineVolumeRodEndButton
+            // 
+            this.determineVolumeRodEndButton.Location = new System.Drawing.Point(235, 22);
+            this.determineVolumeRodEndButton.Name = "determineVolumeRodEndButton";
+            this.determineVolumeRodEndButton.Size = new System.Drawing.Size(82, 39);
+            this.determineVolumeRodEndButton.TabIndex = 5;
+            this.determineVolumeRodEndButton.Text = "Determine Volume";
+            this.determineVolumeRodEndButton.UseVisualStyleBackColor = true;
+            this.determineVolumeRodEndButton.Click += new System.EventHandler(this.determineVolumeRodEndButton_Click_1);
+            // 
+            // pistonAreaRodEndTextBox
+            // 
+            this.pistonAreaRodEndTextBox.Location = new System.Drawing.Point(120, 45);
+            this.pistonAreaRodEndTextBox.Name = "pistonAreaRodEndTextBox";
+            this.pistonAreaRodEndTextBox.Size = new System.Drawing.Size(87, 20);
+            this.pistonAreaRodEndTextBox.TabIndex = 4;
+            // 
+            // cylinderStrokeRodEndTextBox
+            // 
+            this.cylinderStrokeRodEndTextBox.Location = new System.Drawing.Point(120, 19);
+            this.cylinderStrokeRodEndTextBox.Name = "cylinderStrokeRodEndTextBox";
+            this.cylinderStrokeRodEndTextBox.Size = new System.Drawing.Size(87, 20);
+            this.cylinderStrokeRodEndTextBox.TabIndex = 3;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 70);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(58, 26);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "Enter Rod\r\nArea (in^2)";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 39);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(64, 26);
+            this.label20.TabIndex = 1;
+            this.label20.Text = "Enter Piston\r\nArea (in^2)";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(6, 22);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(106, 13);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Enter Cyl. Stroke (in.)";
+            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.capEndVolumeAreaLabel);
@@ -1087,191 +1277,25 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Enter Cylinder DIA (in.)";
             // 
-            // groupBox4
+            // tabPage4
             // 
-            this.groupBox4.Controls.Add(this.rodEndCapVolumeAreaLabel);
-            this.groupBox4.Controls.Add(this.rodEndRodVolumeAreaLabel);
-            this.groupBox4.Controls.Add(this.rodAreaVolumeTextBox);
-            this.groupBox4.Controls.Add(this.cylinderVolumeRodEndAnswerLabel);
-            this.groupBox4.Controls.Add(this.determineVolumeRodEndButton);
-            this.groupBox4.Controls.Add(this.pistonAreaRodEndTextBox);
-            this.groupBox4.Controls.Add(this.cylinderStrokeRodEndTextBox);
-            this.groupBox4.Controls.Add(this.label21);
-            this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Controls.Add(this.label19);
-            this.groupBox4.Location = new System.Drawing.Point(440, 260);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(363, 126);
-            this.groupBox4.TabIndex = 4;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Cylinder Volume Rod End";
+            this.tabPage4.Controls.Add(this.groupBox10);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(852, 417);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Orifice";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // label19
+            // groupBox10
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(6, 22);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(106, 13);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Enter Cyl. Stroke (in.)";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 39);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(64, 26);
-            this.label20.TabIndex = 1;
-            this.label20.Text = "Enter Piston\r\nArea (in^2)";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 70);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(58, 26);
-            this.label21.TabIndex = 2;
-            this.label21.Text = "Enter Rod\r\nArea (in^2)";
-            // 
-            // cylinderStrokeRodEndTextBox
-            // 
-            this.cylinderStrokeRodEndTextBox.Location = new System.Drawing.Point(120, 19);
-            this.cylinderStrokeRodEndTextBox.Name = "cylinderStrokeRodEndTextBox";
-            this.cylinderStrokeRodEndTextBox.Size = new System.Drawing.Size(87, 20);
-            this.cylinderStrokeRodEndTextBox.TabIndex = 3;
-            // 
-            // pistonAreaRodEndTextBox
-            // 
-            this.pistonAreaRodEndTextBox.Location = new System.Drawing.Point(120, 45);
-            this.pistonAreaRodEndTextBox.Name = "pistonAreaRodEndTextBox";
-            this.pistonAreaRodEndTextBox.Size = new System.Drawing.Size(87, 20);
-            this.pistonAreaRodEndTextBox.TabIndex = 4;
-            // 
-            // determineVolumeRodEndButton
-            // 
-            this.determineVolumeRodEndButton.Location = new System.Drawing.Point(235, 22);
-            this.determineVolumeRodEndButton.Name = "determineVolumeRodEndButton";
-            this.determineVolumeRodEndButton.Size = new System.Drawing.Size(82, 39);
-            this.determineVolumeRodEndButton.TabIndex = 5;
-            this.determineVolumeRodEndButton.Text = "Determine Volume";
-            this.determineVolumeRodEndButton.UseVisualStyleBackColor = true;
-            this.determineVolumeRodEndButton.Click += new System.EventHandler(this.determineVolumeRodEndButton_Click_1);
-            // 
-            // cylinderVolumeRodEndAnswerLabel
-            // 
-            this.cylinderVolumeRodEndAnswerLabel.AutoSize = true;
-            this.cylinderVolumeRodEndAnswerLabel.Location = new System.Drawing.Point(6, 100);
-            this.cylinderVolumeRodEndAnswerLabel.Name = "cylinderVolumeRodEndAnswerLabel";
-            this.cylinderVolumeRodEndAnswerLabel.Size = new System.Drawing.Size(10, 13);
-            this.cylinderVolumeRodEndAnswerLabel.TabIndex = 6;
-            this.cylinderVolumeRodEndAnswerLabel.Text = "-";
-            // 
-            // rodAreaVolumeTextBox
-            // 
-            this.rodAreaVolumeTextBox.Location = new System.Drawing.Point(120, 71);
-            this.rodAreaVolumeTextBox.Name = "rodAreaVolumeTextBox";
-            this.rodAreaVolumeTextBox.Size = new System.Drawing.Size(87, 20);
-            this.rodAreaVolumeTextBox.TabIndex = 7;
-            // 
-            // rodEndRodVolumeAreaLabel
-            // 
-            this.rodEndRodVolumeAreaLabel.AutoSize = true;
-            this.rodEndRodVolumeAreaLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.rodEndRodVolumeAreaLabel.Location = new System.Drawing.Point(213, 76);
-            this.rodEndRodVolumeAreaLabel.Name = "rodEndRodVolumeAreaLabel";
-            this.rodEndRodVolumeAreaLabel.Size = new System.Drawing.Size(13, 13);
-            this.rodEndRodVolumeAreaLabel.TabIndex = 8;
-            this.rodEndRodVolumeAreaLabel.Text = "?";
-            this.rodEndRodVolumeAreaLabel.Click += new System.EventHandler(this.rodEndRodVolumeAreaLabel_Click);
-            // 
-            // rodEndCapVolumeAreaLabel
-            // 
-            this.rodEndCapVolumeAreaLabel.AutoSize = true;
-            this.rodEndCapVolumeAreaLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.rodEndCapVolumeAreaLabel.Location = new System.Drawing.Point(213, 48);
-            this.rodEndCapVolumeAreaLabel.Name = "rodEndCapVolumeAreaLabel";
-            this.rodEndCapVolumeAreaLabel.Size = new System.Drawing.Size(13, 13);
-            this.rodEndCapVolumeAreaLabel.TabIndex = 9;
-            this.rodEndCapVolumeAreaLabel.Text = "?";
-            this.rodEndCapVolumeAreaLabel.Click += new System.EventHandler(this.rodEndCapVolumeAreaLabel_Click);
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.cylFlowrateAreaCalcLabel);
-            this.groupBox9.Controls.Add(this.determineCylFlowrateButton);
-            this.groupBox9.Controls.Add(this.cylAreaFlowrateTextBox);
-            this.groupBox9.Controls.Add(this.cylVelocityTextBox);
-            this.groupBox9.Controls.Add(this.cylinderFlowRateAnswerLabel);
-            this.groupBox9.Controls.Add(this.label23);
-            this.groupBox9.Controls.Add(this.label22);
-            this.groupBox9.Location = new System.Drawing.Point(440, 20);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(363, 100);
-            this.groupBox9.TabIndex = 5;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Cylinder Flowrate";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 16);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(72, 26);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Enter Cylinder\r\nVelcity (in/s)";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 48);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(106, 13);
-            this.label23.TabIndex = 1;
-            this.label23.Text = "Enter Cyl. Area (in^2)";
-            // 
-            // cylinderFlowRateAnswerLabel
-            // 
-            this.cylinderFlowRateAnswerLabel.AutoSize = true;
-            this.cylinderFlowRateAnswerLabel.Location = new System.Drawing.Point(6, 76);
-            this.cylinderFlowRateAnswerLabel.Name = "cylinderFlowRateAnswerLabel";
-            this.cylinderFlowRateAnswerLabel.Size = new System.Drawing.Size(10, 13);
-            this.cylinderFlowRateAnswerLabel.TabIndex = 2;
-            this.cylinderFlowRateAnswerLabel.Text = "-";
-            // 
-            // cylVelocityTextBox
-            // 
-            this.cylVelocityTextBox.Location = new System.Drawing.Point(120, 19);
-            this.cylVelocityTextBox.Name = "cylVelocityTextBox";
-            this.cylVelocityTextBox.Size = new System.Drawing.Size(87, 20);
-            this.cylVelocityTextBox.TabIndex = 3;
-            // 
-            // cylAreaFlowrateTextBox
-            // 
-            this.cylAreaFlowrateTextBox.Location = new System.Drawing.Point(120, 45);
-            this.cylAreaFlowrateTextBox.Name = "cylAreaFlowrateTextBox";
-            this.cylAreaFlowrateTextBox.Size = new System.Drawing.Size(87, 20);
-            this.cylAreaFlowrateTextBox.TabIndex = 4;
-            // 
-            // determineCylFlowrateButton
-            // 
-            this.determineCylFlowrateButton.Location = new System.Drawing.Point(235, 22);
-            this.determineCylFlowrateButton.Name = "determineCylFlowrateButton";
-            this.determineCylFlowrateButton.Size = new System.Drawing.Size(82, 39);
-            this.determineCylFlowrateButton.TabIndex = 5;
-            this.determineCylFlowrateButton.Text = "Determine Flow";
-            this.determineCylFlowrateButton.UseVisualStyleBackColor = true;
-            this.determineCylFlowrateButton.Click += new System.EventHandler(this.determineCylFlowrateButton_Click);
-            // 
-            // cylFlowrateAreaCalcLabel
-            // 
-            this.cylFlowrateAreaCalcLabel.AutoSize = true;
-            this.cylFlowrateAreaCalcLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.cylFlowrateAreaCalcLabel.Location = new System.Drawing.Point(213, 48);
-            this.cylFlowrateAreaCalcLabel.Name = "cylFlowrateAreaCalcLabel";
-            this.cylFlowrateAreaCalcLabel.Size = new System.Drawing.Size(13, 13);
-            this.cylFlowrateAreaCalcLabel.TabIndex = 6;
-            this.cylFlowrateAreaCalcLabel.Text = "?";
-            this.cylFlowrateAreaCalcLabel.Click += new System.EventHandler(this.cylFlowrateAreaCalcLabel_Click);
+            this.groupBox10.Location = new System.Drawing.Point(20, 20);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(363, 126);
+            this.groupBox10.TabIndex = 0;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Single Orifice Pressure Drop";
             // 
             // Form1
             // 
@@ -1301,6 +1325,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -1309,10 +1337,7 @@
             this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1431,6 +1456,8 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label cylFlowrateAreaCalcLabel;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.GroupBox groupBox10;
     }
 }
 
