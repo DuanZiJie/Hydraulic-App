@@ -197,7 +197,7 @@ namespace HydraulicApp
 
             if(Double.TryParse(flowrateCylSpedTextBox.Text, out Flowrate) && Double.TryParse(areaCylSpeedTextBox.Text, out Area))
             {
-                cylSpeedAnswerLabel.Text = CylinderSpeedAnswerText + Cylinder.CylinderSpeed(Flowrate, Area).ToString("F2") + " feet per second";
+                cylSpeedAnswerLabel.Text = CylinderSpeedAnswerText + Cylinder.CylinderSpeed(Flowrate, Area).ToString("F2") + " inches per second";
             }
         }
 
@@ -208,7 +208,7 @@ namespace HydraulicApp
             double RodArea;
 
             if(Double.TryParse(flowrateRodEndTextBox.Text, out Flowrate) && Double.TryParse(pistonAreaRodSpeedTextBox.Text, out PistonArea) && Double.TryParse(rodAreaTextBox.Text, out RodArea))
-                cylSpeedRodEndAnswerLabel.Text = CylinderSpeedAnswerText + Cylinder.CylinderSpeedRodEnd(Flowrate, PistonArea, RodArea).ToString("F2") + " feet per second";
+                cylSpeedRodEndAnswerLabel.Text = CylinderSpeedAnswerText + Cylinder.CylinderSpeedRodEnd(Flowrate, PistonArea, RodArea).ToString("F2") + " inches per second";
         }
 
         private void determineVolumeRodEndButton_Click(object sender, EventArgs e)

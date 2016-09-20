@@ -5,6 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HydraulicApp", "HydraulicApp\HydraulicApp.csproj", "{2338B7EA-D6D8-4C77-BBD4-047F27899EDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HydraulicApp.Test", "HydraulicApp.Test\HydraulicApp.Test.csproj", "{BED6695A-88F8-41DE-A172-E3B67797C269}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2338B7EA-D6D8-4C77-BBD4-047F27899EDA} = {2338B7EA-D6D8-4C77-BBD4-047F27899EDA}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{2338B7EA-D6D8-4C77-BBD4-047F27899EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2338B7EA-D6D8-4C77-BBD4-047F27899EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2338B7EA-D6D8-4C77-BBD4-047F27899EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED6695A-88F8-41DE-A172-E3B67797C269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED6695A-88F8-41DE-A172-E3B67797C269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED6695A-88F8-41DE-A172-E3B67797C269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED6695A-88F8-41DE-A172-E3B67797C269}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

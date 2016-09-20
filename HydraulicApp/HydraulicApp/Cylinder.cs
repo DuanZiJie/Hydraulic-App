@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HydraulicApp
 {
-    class Cylinder
+    public class Cylinder
     {
         public static double CylinderAreaCapEnd(double diaOfPiston)
         {
@@ -25,12 +25,12 @@ namespace HydraulicApp
         
         public static double CylinderSpeed(double flowRate, double cylinderArea)
         {
-            return (231 * flowRate) / (12 * 60 * cylinderArea);
+            return (231 * flowRate) / (60 * cylinderArea);
         }
 
         public static double CylinderSpeedRodEnd(double flowRate, double pistonArea, double rodArea)
         {
-            return (231 * flowRate) / (12 * 60 * (pistonArea - rodArea));
+            return (231 * flowRate) / (60 * (pistonArea - rodArea));
         }
 
         public static double CylinderVolume(double cylinderStroke, double area)
