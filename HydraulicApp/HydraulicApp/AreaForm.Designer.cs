@@ -30,7 +30,7 @@
         {
             this.enterDIALabel = new System.Windows.Forms.Label();
             this.enterDIATextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.continueButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.enterDIAWarningLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -50,16 +50,17 @@
             this.enterDIATextBox.Name = "enterDIATextBox";
             this.enterDIATextBox.Size = new System.Drawing.Size(85, 20);
             this.enterDIATextBox.TabIndex = 1;
+            this.enterDIATextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enterDIATextBox_KeyDown);
             // 
-            // button1
+            // continueButton
             // 
-            this.button1.Location = new System.Drawing.Point(79, 118);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Continue";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.continueButton.Location = new System.Drawing.Point(79, 118);
+            this.continueButton.Name = "continueButton";
+            this.continueButton.Size = new System.Drawing.Size(99, 23);
+            this.continueButton.TabIndex = 2;
+            this.continueButton.Text = "Continue";
+            this.continueButton.UseVisualStyleBackColor = true;
+            this.continueButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -88,7 +89,7 @@
             this.ClientSize = new System.Drawing.Size(284, 166);
             this.Controls.Add(this.enterDIAWarningLabel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.continueButton);
             this.Controls.Add(this.enterDIATextBox);
             this.Controls.Add(this.enterDIALabel);
             this.Name = "AreaForm";
@@ -102,7 +103,7 @@
 
         private System.Windows.Forms.Label enterDIALabel;
         private System.Windows.Forms.TextBox enterDIATextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button continueButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label enterDIAWarningLabel;
     }

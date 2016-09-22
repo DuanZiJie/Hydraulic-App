@@ -23,9 +23,8 @@ namespace HydraulicApp
 
         }
 
-        public Orifice(double Flowrate, double OrificeDia, string CDValueString)
+        public Orifice(double OrificeDia, string CDValueString)
         {
-            this.Flowrate = Flowrate;
             this.OrificeDia = OrificeDia;
             this.CDValueString = CDValueString;
             try
@@ -51,9 +50,19 @@ namespace HydraulicApp
             throw e;
         }
 
-        static public double SingleOrificePressureDrop(Orifice orifice)
+        static public double SingleOrificePressureDrop(Orifice orifice, double flowrate)
         {            
-            return SpecificGravity * Math.Pow(orifice.Flowrate / (29.81 * orifice.CDValue * Math.Pow(orifice.OrificeDia, 2)), 2);
+            return SpecificGravity * Math.Pow(flowrate / (29.81 * orifice.CDValue * Math.Pow(orifice.OrificeDia, 2)), 2);
+        }
+
+        static public double SingleOrificeFlowrate(Orifice orifice, double pressureDrop)
+        {
+            return 29.81 * orifice.CDValue * Math.Pow(orifice.OrificeDia, 2) * Math.Sqrt(pressureDrop / SpecificGravity);
+        }
+
+        public void SetDiaFromFlowAndPress()
+        {
+            this.OrificeDia = Math.Sqrt((Flowrate * Math.Sqrt(SpecificGravity / PressureDrop)) / (29.81 * CDValue));
         }
     }
 }

@@ -33,5 +33,13 @@ namespace HydraulicApp
                 enterDIAWarningLabel.Show();
             }
         }
+
+        private void enterDIATextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                continueButton.PerformClick();
+            }
+        }
     }
 }
