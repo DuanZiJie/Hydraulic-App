@@ -14,7 +14,7 @@ namespace HydraulicApp
     {
         string HorsepowerLabelText = "The Horsepower is: ";
         string PressureLabelText = "The Pressure is: ";
-        string VelocityLabelText = "The velocity is: ";
+        string VelocityLabelText = "The Velocity is: ";
         string FlowrateLabelText = "The Flowrate is: ";
 
         string PressureDropHeatLabelText = "The Added Heat is: ";
@@ -25,6 +25,8 @@ namespace HydraulicApp
         string AreaLabelText = "The Area is: ";
         string CylinderSpeedAnswerText = "The Speed is: ";
         string VolumeLabelText = "The Volume is: ";
+
+        Orifice tempOrifice;
 
         public Form1()
         {
@@ -38,6 +40,11 @@ namespace HydraulicApp
             cylinderVolumeCapEndAnswerLabel.Text = VolumeLabelText;
             cylinderVolumeRodEndAnswerLabel.Text = VolumeLabelText;
             cylinderFlowRateAnswerLabel.Text = FlowrateLabelText;
+
+            for (int x = 0; x < Orifice.OrificeDescriptions.Length; ++x)
+            {
+                orificeTypeComboBox.Items.Add(Orifice.OrificeDescriptions[x]);
+            }
         }
 
         private void determineHorsepowerButton_Click(object sender, EventArgs e)
@@ -238,6 +245,28 @@ namespace HydraulicApp
 
             if (Double.TryParse(cylVelocityTextBox.Text, out Velocity) && Double.TryParse(cylAreaFlowrateTextBox.Text, out Area))
                 cylinderFlowRateAnswerLabel.Text = FlowrateLabelText + Cylinder.CylinderFlowRate(Velocity, Area).ToString("F2") + " GPM";
+        }
+
+        private void createOrifice_Click(object sender, EventArgs e)
+        {
+            double orificeDia = 0.0;
+
+            if (Double.TryParse(orificeDiaTextBox.Text, out orificeDia))
+            {
+                tempOrifice = new Orifice(orificeDia, orificeTypeComboBox.Text);
+                orificeCreatedLabel.Text = "Orifice creation succesful!";
+            }
+        }
+
+        private void determineOrificeFlowrateButton_Click(object sender, EventArgs e)
+        {
+            double flowrate = 0.0;
+
+            if (Double.TryParse(orificeFlowrateTextBox.Text,out flowrate))
+            {
+                
+                orificeFlowrateLabel.Text = FlowrateLabelText + Orifice.SingleOrificeFlowrate(tempOrifice, flowrate).ToString("F2") + " GPM";
+            }
         }
     }
 }

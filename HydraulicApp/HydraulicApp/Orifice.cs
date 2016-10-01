@@ -16,7 +16,7 @@ namespace HydraulicApp
         public string CDValueString { get; set; }
 
         static double[] OrificeValues = { .62, .98, .61, .82, .97, .54, .72 };
-        static string[] OrificeDescriptions = { "Knife Edge" , "Rounded" , "Short L", "Long L" , "Rounded L", "Inlet Short L", "Inlet Long L" };
+        public static string[] OrificeDescriptions = { "Knife Edge" , "Rounded" , "Short L", "Long L" , "Rounded L", "Inlet Short L", "Inlet Long L" };
 
         public Orifice()
         {

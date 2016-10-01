@@ -143,6 +143,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.orificeDiaTextBox = new System.Windows.Forms.TextBox();
+            this.createOrifice = new System.Windows.Forms.Button();
+            this.orificeCreatedLabel = new System.Windows.Forms.Label();
+            this.orificeTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.orificeFlowrateTextBox = new System.Windows.Forms.TextBox();
+            this.determineOrificeFlowrateButton = new System.Windows.Forms.Button();
+            this.orificeFlowrateLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.flowRateGroupBox.SuspendLayout();
@@ -162,6 +173,8 @@
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // determineHorsePowerbutton
@@ -1279,6 +1292,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.groupBox11);
             this.tabPage4.Controls.Add(this.groupBox10);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -1290,12 +1304,118 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.orificeTypeComboBox);
+            this.groupBox10.Controls.Add(this.orificeCreatedLabel);
+            this.groupBox10.Controls.Add(this.createOrifice);
+            this.groupBox10.Controls.Add(this.orificeDiaTextBox);
+            this.groupBox10.Controls.Add(this.label25);
+            this.groupBox10.Controls.Add(this.label24);
             this.groupBox10.Location = new System.Drawing.Point(20, 20);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(363, 126);
+            this.groupBox10.Size = new System.Drawing.Size(363, 100);
             this.groupBox10.TabIndex = 0;
             this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Single Orifice Pressure Drop";
+            this.groupBox10.Text = "Create Orifice";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 22);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(117, 13);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Enter dia. of Orifice (in.)";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(6, 48);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(97, 13);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Select Orifice Type";
+            // 
+            // orificeDiaTextBox
+            // 
+            this.orificeDiaTextBox.Location = new System.Drawing.Point(120, 19);
+            this.orificeDiaTextBox.Name = "orificeDiaTextBox";
+            this.orificeDiaTextBox.Size = new System.Drawing.Size(87, 20);
+            this.orificeDiaTextBox.TabIndex = 2;
+            // 
+            // createOrifice
+            // 
+            this.createOrifice.Location = new System.Drawing.Point(235, 22);
+            this.createOrifice.Name = "createOrifice";
+            this.createOrifice.Size = new System.Drawing.Size(82, 39);
+            this.createOrifice.TabIndex = 4;
+            this.createOrifice.Text = "Create Orifice";
+            this.createOrifice.UseVisualStyleBackColor = true;
+            this.createOrifice.Click += new System.EventHandler(this.createOrifice_Click);
+            // 
+            // orificeCreatedLabel
+            // 
+            this.orificeCreatedLabel.AutoSize = true;
+            this.orificeCreatedLabel.Location = new System.Drawing.Point(6, 76);
+            this.orificeCreatedLabel.Name = "orificeCreatedLabel";
+            this.orificeCreatedLabel.Size = new System.Drawing.Size(10, 13);
+            this.orificeCreatedLabel.TabIndex = 5;
+            this.orificeCreatedLabel.Text = "-";
+            // 
+            // orificeTypeComboBox
+            // 
+            this.orificeTypeComboBox.FormattingEnabled = true;
+            this.orificeTypeComboBox.Location = new System.Drawing.Point(120, 51);
+            this.orificeTypeComboBox.Name = "orificeTypeComboBox";
+            this.orificeTypeComboBox.Size = new System.Drawing.Size(87, 21);
+            this.orificeTypeComboBox.TabIndex = 6;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.orificeFlowrateLabel);
+            this.groupBox11.Controls.Add(this.determineOrificeFlowrateButton);
+            this.groupBox11.Controls.Add(this.orificeFlowrateTextBox);
+            this.groupBox11.Controls.Add(this.label26);
+            this.groupBox11.Location = new System.Drawing.Point(20, 140);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(363, 100);
+            this.groupBox11.TabIndex = 1;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Determine Flowrate";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(6, 22);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(76, 26);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Enter Pressure\r\nDrop (psi)";
+            // 
+            // orificeFlowrateTextBox
+            // 
+            this.orificeFlowrateTextBox.Location = new System.Drawing.Point(120, 19);
+            this.orificeFlowrateTextBox.Name = "orificeFlowrateTextBox";
+            this.orificeFlowrateTextBox.Size = new System.Drawing.Size(87, 20);
+            this.orificeFlowrateTextBox.TabIndex = 1;
+            // 
+            // determineOrificeFlowrateButton
+            // 
+            this.determineOrificeFlowrateButton.Location = new System.Drawing.Point(235, 22);
+            this.determineOrificeFlowrateButton.Name = "determineOrificeFlowrateButton";
+            this.determineOrificeFlowrateButton.Size = new System.Drawing.Size(82, 39);
+            this.determineOrificeFlowrateButton.TabIndex = 2;
+            this.determineOrificeFlowrateButton.Text = "Determine Flowrate";
+            this.determineOrificeFlowrateButton.UseVisualStyleBackColor = true;
+            this.determineOrificeFlowrateButton.Click += new System.EventHandler(this.determineOrificeFlowrateButton_Click);
+            // 
+            // orificeFlowrateLabel
+            // 
+            this.orificeFlowrateLabel.AutoSize = true;
+            this.orificeFlowrateLabel.Location = new System.Drawing.Point(6, 76);
+            this.orificeFlowrateLabel.Name = "orificeFlowrateLabel";
+            this.orificeFlowrateLabel.Size = new System.Drawing.Size(10, 13);
+            this.orificeFlowrateLabel.TabIndex = 3;
+            this.orificeFlowrateLabel.Text = "-";
             // 
             // Form1
             // 
@@ -1338,6 +1458,10 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.tabPage4.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1458,6 +1582,17 @@
         private System.Windows.Forms.Label cylFlowrateAreaCalcLabel;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button createOrifice;
+        private System.Windows.Forms.TextBox orificeDiaTextBox;
+        private System.Windows.Forms.Label orificeCreatedLabel;
+        private System.Windows.Forms.ComboBox orificeTypeComboBox;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.TextBox orificeFlowrateTextBox;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label orificeFlowrateLabel;
+        private System.Windows.Forms.Button determineOrificeFlowrateButton;
     }
 }
 
