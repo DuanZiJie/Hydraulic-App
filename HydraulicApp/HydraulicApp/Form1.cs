@@ -26,6 +26,8 @@ namespace HydraulicApp
         string CylinderSpeedAnswerText = "The Speed is: ";
         string VolumeLabelText = "The Volume is: ";
 
+        string PressureDropLabelText = "The Pressure Drop is ";
+
         Orifice tempOrifice;
 
         public Form1()
@@ -40,6 +42,7 @@ namespace HydraulicApp
             cylinderVolumeCapEndAnswerLabel.Text = VolumeLabelText;
             cylinderVolumeRodEndAnswerLabel.Text = VolumeLabelText;
             cylinderFlowRateAnswerLabel.Text = FlowrateLabelText;
+            orificePressureDropAnswerLabel.Text = PressureDropLabelText;
 
             for (int x = 0; x < Orifice.OrificeDescriptions.Length; ++x)
             {
@@ -264,8 +267,36 @@ namespace HydraulicApp
 
             if (Double.TryParse(orificeFlowrateTextBox.Text,out flowrate))
             {
-                
-                orificeFlowrateLabel.Text = FlowrateLabelText + Orifice.SingleOrificeFlowrate(tempOrifice, flowrate).ToString("F2") + " GPM";
+
+                try
+                {
+                    orificeFlowrateLabel.Text = FlowrateLabelText + Orifice.SingleOrificeFlowrate(tempOrifice, flowrate).ToString("F2") + " GPM";
+
+                }
+                catch (NullReferenceException)
+                {
+                    orificeFlowrateLabel.ForeColor = System.Drawing.Color.Red;
+                    orificeFlowrateLabel.Text = "Create an Orifice first!";
+                }
+            }
+        }
+
+        private void orificeDeterminePressureDropButton_Click(object sender, EventArgs e)
+        {
+            double pressureDrop = 0.0;
+
+            if (Double.TryParse(orificePressureDropTextBox.Text, out pressureDrop))
+            {
+                try
+                {
+                    orificePressureDropAnswerLabel.Text = PressureDropLabelText + Orifice.SingleOrificePressureDrop(tempOrifice, pressureDrop).ToString("F2") + " PSI";
+
+                }
+                catch (NullReferenceException)
+                {
+                    orificePressureDropAnswerLabel.ForeColor = System.Drawing.Color.Red;
+                    orificePressureDropAnswerLabel.Text = "Create an Orifice first!";
+                }
             }
         }
     }
